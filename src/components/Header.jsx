@@ -4,7 +4,7 @@ import { StyledHeader, Nav, Linkul, StyledButtons, Button, SignB, Logo, MobileSc
 import { Container } from './styles/Container.styled';
 import { NavLink } from 'react-router-dom';
 
-export default function Header() {
+function Header() {
   return (
    <StyledHeader>
     <Container>
@@ -40,3 +40,5 @@ export default function Header() {
     </StyledHeader>
   );
 }
+
+export default Header;

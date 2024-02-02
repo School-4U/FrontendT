@@ -14,9 +14,11 @@ import {
 import { Formik, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { GoogleLogin } from "@react-oauth/google";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 
 const clientId =
-  "http://193762191190-fgbm80sm4g6mam8pnjgs5fjvo6klcbik.apps.googleusercontent.com";
+  "193762191190-fgbm80sm4g6mam8pnjgs5fjvo6klcbik.apps.googleusercontent.com";
+
 const onSuccess = (response) => {
   console.log("Google login success:", response);
   // Handle success (e.g., update state, authenticate user, etc.)
