@@ -1,13 +1,44 @@
+import { AccordionItemButton } from "react-accessible-accordion"
 import styled from "styled-components"
 
 export const StyledHome = styled.div`
 
 ` 
 
+export const SearchB = styled.div`
+border: 1px solid black;
+border-radius: 8px;
+background: white;
+padding: 0 0 0 20px;
+width: 400px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-top: 15px;
+
+
+input[type="text"]{
+  border: none;
+  outline: none;
+  flex: 1;
+  margin-left: 9px;
+}
+button {
+  border: none;
+  background: #6E7FD7;
+  color: white;
+  padding: 10px 12px;
+  cursor: pointer;
+  
+}
+
+
+`
+
 export const Right = styled.div`
 display: flex;
 flex-direction: column;
-padding: 0 20px
+padding: 0 20px;
    
 `
 
@@ -43,35 +74,39 @@ export const WhyContainer = styled.div`
 font-size: 52px;
 text-align:  center;
 margin-top: 90px;
-font-family: 'inter',serif;
+font-family: 'Inter Tight', sans-serif;
 font-weight: 700
 
 `
 export const SubHeading = styled.div`
 text-align: center;
 margin-top: 20px;
-font-family: 'inter',serif;
+font-family: 'Inter Tight', sans-serif;
 font-weight: 400;
 `
 export const Grid = styled.div`
 display: grid;
 grid-template-columns: repeat(3, 1fr);
-grid-template-rows: repeat(2, 1fr);
 margin-top: 90px;
 
+`
+
+export const Grid2 = styled.div`
+display: flex;
+margin: 0 300px;
 
 `
 export const WhatContainer = styled.div`
 background: #6E7FD7;
-margin-top: 90px;
-padding-top: 50px;
+margin-top: 50px;
+padding: 50px;
 
 P{
     color: white;
     font-size: 62px;
     text-align:  center;
     margin-top: 30px;
-    font-family: 'inter',serif;
+    font-family: 'Inter Tight', sans-serif;
     font-weight: 700
 
 }
@@ -115,4 +150,53 @@ export const CommentImage = styled.img`
   width: 50px;
   height: 50px; 
   object-fit: cover;
-`;
+`
+
+export const AccordionStyle = styled.div`
+margin-top: 40px;
+
+`
+export const StyledSection = styled(AccordionItemButton)`
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-radius: 8px;
+padding: 10px; 
+background-color: transparent;
+
+`
+export const Text = styled.div`
+margin-top: 9px;
+text-align: center
+`
+export const Newsletter = styled.div`
+border: 1px solid black;
+border-radius: 8px;
+background: white;
+padding: 0 0 0 20px;
+width: 400px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-top: 15px;
+
+input[type="email"]{
+  border: none;
+  outline: none;
+  flex: 1
+  margin-left: 9px;
+}
+
+button {
+  border: none;
+  background: #6E7FD7;
+  color: white;
+  padding: 10px 12px;
+  cursor: pointer;
+  
+}
+`
+export const Center = styled.div`
+  width: 500px;
+   margin: 30px auto
+`

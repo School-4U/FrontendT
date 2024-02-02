@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledHeader = styled.header `
     padding: 20px;
-    margin: 30px auto;
+    margin: 20px auto 0;
     // position: sticky;
     // top: 0;
 
@@ -28,12 +28,12 @@ height: 32px;
 margin-left: 20px;
 
 `
-export const Buttons = styled.div`
+export const StyledButtons = styled.div`
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 padding: 10px;
 gap: 50px;
-font-family: 'inter', serif;
+font-family: 'Inter Tight', sans-serif;
 font-weight: 400;
 
 

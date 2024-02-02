@@ -1,7 +1,8 @@
 
-import { StyledHeader, Nav, Linkul, Logo, Buttons, Button, SignB, MobileScreen} from './styles/Header.styled';
+import { StyledHeader, Nav, Linkul, StyledButtons, Button, SignB, Logo, MobileScreen} from './styles/Header.styled';
 import { Container } from './styles/Container.styled';
 import { NavLink } from 'react-router-dom';
+
 
 export default function Header() {
   return (
@@ -18,10 +19,19 @@ export default function Header() {
               <li><NavLink to="/Home">Home</NavLink></li>
               <li><NavLink to="/about">About Us</NavLink></li>
               <li><NavLink to="/contact">Contact Us</NavLink></li>
-              <Buttons>
-          <Button>Log in</Button>
-            <SignB>Sign up</SignB>
-          </Buttons> 
+              <StyledButtons>
+                <>
+             <Button>Log in</Button>
+              </>
+              
+              <NavLink to="/popup">
+                 <SignB>Sign up</SignB>
+              </NavLink>
+            
+   
+
+    </StyledButtons>
+           
               </Linkul>
         
       </Nav>

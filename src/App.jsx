@@ -5,6 +5,8 @@ import GlobalStyles from "./components/styles/Global";
 import { Home, About, Contact } from "./pages/Main";
 import { Routes, Route } from "react-router-dom";
 
+import { Popup } from "./components/Popup";
+
 
 
 function App() {
@@ -17,6 +19,7 @@ function App() {
          <Route path="/Home"element={<Home/>} />
          <Route path="/About"element={<About/>} />
          <Route path="/Contact"element={<Contact/>} />
+         <Route path="/popup" element={<Popup />} />
     </Routes>
     
     </Container>

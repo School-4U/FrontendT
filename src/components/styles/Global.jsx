@@ -10,7 +10,7 @@ const GlobalStyles = createGlobalStyle`
 }
 
 body{
-    font-family: 'inter', sans-serif;
+    font-family: 'Inter Tight', sans-serif;
 }
 
 img{
@@ -31,7 +31,7 @@ span{
 
 h1{
     padding-bottom: 20px;
-    font-family: 'inter', serif;
+    font-family: 'Inter Tight', sans-serif;
     font-weight: 900;
     font-size: 46px
 }
@@ -42,9 +42,11 @@ h2{
 }
 
 p{
-    font-family: 'inter', serif;
+    font-family: 'Inter Tight', sans-serif;
     font-weight: 400;
 }
+
+
 
 `
 export default GlobalStyles
