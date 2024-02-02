@@ -60,14 +60,14 @@ export const SignB = styled.button`
     color: white;
 `
 export const MobileScreen = styled.div`
-display: none
+display: none;
 position: absolute;
 top: 3.5rem;
 right: 2.75rem;
 flex-direction: column;
 justify-content: space-between;
 width: 2.25rem;
-height: 2rem
+height: 2rem;
 background-color: #fff; /* Add a background color temporarily */
 //   z-index: 999;
 
@@ -81,7 +81,7 @@ span{
 }
 
 @media screen and (max-width: 765px){
-display: display: flex;
+display: flex;
 
 }
 
