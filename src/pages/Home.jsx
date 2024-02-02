@@ -1,5 +1,5 @@
-import { Container } from "../components/styles/Container.styled"
-import {Flex} from "../components/styles/Flex.styled"
+import { Container } from "../components/styles/Container.styled";
+import { Flex } from "../components/styles/Flex.styled";
 import { Card } from "../components/styles/Card.styled";
 import { Right, Middle, Left, Left2, Center, Right2, WhyContainer,SchoolLink, Text, SubHeading, Grid, Grid2, WhatContainer, Comments, Comments2, CommentImage, SearchB, Newsletter} from "../components/styles/Home.styled"
 import { FaSearch, FaMailBulk, FaArrowRight} from 'react-icons/fa';
@@ -22,30 +22,31 @@ export const Home = () => {
             <SchoolLink>
             <Link to="/FindASchool">View our Schools <FaArrowRight /></Link>
             </SchoolLink>
-            
-        </Right>
+          </Right>
 
-        <Left>
-        <img src="assets/lady2.jpg" alt="portrait-charming-friendly-polite-happy-african-american-adult-woman-blouse-tilting-head-smiling-broadly-showing-ok"></img>
-        
-        </Left>
-    </Flex>
+          <Left>
+            <img
+              src="assets/lady2.jpg"
+              alt="portrait-charming-friendly-polite-happy-african-american-adult-woman-blouse-tilting-head-smiling-broadly-showing-ok"
+            ></img>
+          </Left>
+        </Flex>
 
-    <Flex>
-    <Right2>
-        <h2>2K+</h2>
-        <p>Current Users</p>
-
-    </Right2>
-    <Middle>
-    <h2>10</h2>
-    <p>Current Partners</p>
-    </Middle>
-    <Left2>
-        <h2>300+</h2>
-        <p>Schools</p>
-    </Left2>
-    </Flex>
+        <Flex>
+          <Right2>
+            <h2>2K+</h2>
+            <p>Current Users</p>
+          </Right2>
+          <Middle>
+            <h2>10</h2>
+            <p>Current Partners</p>
+          </Middle>
+          <Left2>
+            <h2>300+</h2>
+            <p>Schools</p>
+          </Left2>
+        </Flex>
+    
 
     <WhyContainer>Why Choose Us?</WhyContainer>
     <SubHeading>Check Out Some Of What Our Users Are Saying</SubHeading>
@@ -90,7 +91,6 @@ export const Home = () => {
         <CommentImage src="assets/rename.png" alt='quote' />
         <h5>School4u has helped me save maximum time by providing the best means of finding a school for my kid</h5>
         
-    
     </Comments>
     <hr />
     <Comments2>
@@ -106,7 +106,8 @@ export const Home = () => {
     </Comments>
     <hr />
     </Flex>
-    </WhatContainer>
+  
+   </WhatContainer>
     <WhyContainer>Frequently Asked Questions</WhyContainer>
     <SubHeading>Check Some frequently asked questions by Our Users</SubHeading>
     <Faq />
@@ -119,6 +120,9 @@ export const Home = () => {
             </Newsletter>
     </Center>
    <Footer />
-    </Container>
-  )
-}
+ 
+      </Container>
+    </>
+  );
+};
+

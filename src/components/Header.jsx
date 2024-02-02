@@ -1,7 +1,21 @@
 
+
 import { StyledHeader, Nav, Linkul, StyledButtons, Button, SignB, Logo, MobileScreen} from './styles/Header.styled';
 import { Container } from './styles/Container.styled';
 import { NavLink } from 'react-router-dom';
+import {
+  StyledHeader,
+  Nav,
+  Linkul,
+  Logo,
+  Buttons,
+  Button,
+  SignB,
+  MobileScreen,
+} from "./styles/Header.styled";
+import { Container } from "./styles/Container.styled";
+import { NavLink } from "react-router-dom";
+
 
 
 export default function Header() {
@@ -16,29 +30,27 @@ export default function Header() {
         <span></span>
      </MobileScreen>
             <Linkul>
-              <li><NavLink to="/Home">Home</NavLink></li>
+              <li><NavLink to="/">Home</NavLink></li>
               <li><NavLink to="/about">About Us</NavLink></li>
               <li><NavLink to="/contact">Contact Us</NavLink></li>
               <StyledButtons>
                 <>
-             <Button>Log in</Button>
-              </>
-              
+           
+              <Button>
+                <NavLink to="/login">Log In</NavLink>
+              </Button>
               <NavLink to="/popup">
                  <SignB>Sign up</SignB>
               </NavLink>
-            
-   
 
     </StyledButtons>
            
               </Linkul>
         
       </Nav>
+>
+
       </Container>
-
-   </StyledHeader>
-  )
+    </StyledHeader>
+  );
 }
-
-

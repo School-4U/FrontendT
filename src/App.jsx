@@ -1,8 +1,6 @@
-
-import Header from "./components/Header";
 import { Container } from "./components/styles/Container.styled";
 import GlobalStyles from "./components/styles/Global";
-import { Home, About, Contact } from "./pages/Main";
+import { Home, About, Contact, Login, Signup, Verification } from "./pages/Main";
 import { Routes, Route } from "react-router-dom";
 
 import { Popup } from "./components/Popup";
@@ -19,12 +17,15 @@ function App() {
          <Route path="/"element={<Home/>} />
          <Route path="/About"element={<About/>} />
          <Route path="/Contact"element={<Contact/>} />
+         <Route path="/login" element={<Login />} />
          <Route path="/popup" element={<Popup />} />
-    </Routes>
+         <Route path="/verification" element={<Verification />} />
+         <Route path="*" element={<h1>Page Not Found</h1>} />
     
-    </Container>
-  
-    </> 
+        </Routes>
+      </Container>
+    </>
+
   );
 }
 
