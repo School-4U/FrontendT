@@ -13,7 +13,7 @@ export const PopupContainer = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('assets/Placeholder.svg');
+    background-image: url('assets/placeholder.svg');
     background-size: cover; 
     background-position: center center; 
     background-repeat: no-repeat;

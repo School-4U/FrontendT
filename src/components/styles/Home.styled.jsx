@@ -200,3 +200,6 @@ export const Center = styled.div`
   width: 500px;
    margin: 30px auto
 `
+export const SchoolLink = styled.div`
+margin-top: 15px;
+`

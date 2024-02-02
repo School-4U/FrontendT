@@ -16,7 +16,7 @@ function App() {
     <Header />
     <Container>
     <Routes>
-         <Route path="/Home"element={<Home/>} />
+         <Route path="/"element={<Home/>} />
          <Route path="/About"element={<About/>} />
          <Route path="/Contact"element={<Contact/>} />
          <Route path="/popup" element={<Popup />} />

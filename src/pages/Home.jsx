@@ -1,10 +1,12 @@
 import { Container } from "../components/styles/Container.styled"
 import {Flex} from "../components/styles/Flex.styled"
 import { Card } from "../components/styles/Card.styled";
-import { Right, Middle, Left, Left2, Center, Right2, WhyContainer, Text, SubHeading, Grid, Grid2, WhatContainer, Comments, Comments2, CommentImage, SearchB, Newsletter} from "../components/styles/Home.styled"
-import { FaSearch, FaMailBulk} from 'react-icons/fa';
+import { Right, Middle, Left, Left2, Center, Right2, WhyContainer,SchoolLink, Text, SubHeading, Grid, Grid2, WhatContainer, Comments, Comments2, CommentImage, SearchB, Newsletter} from "../components/styles/Home.styled"
+import { FaSearch, FaMailBulk, FaArrowRight} from 'react-icons/fa';
 import { Faq } from "../components/Faq";
 import { Footer } from "../components/Footer";
+import { Link } from "react-router-dom";
+
 
 export const Home = () => {
   return (
@@ -17,6 +19,10 @@ export const Home = () => {
                 <FaSearch /> <input type="text" placeholder="What will you like to know"></input> <button type="search">Search</button>
      
             </SearchB>
+            <SchoolLink>
+            <Link to="/FindASchool">View our Schools <FaArrowRight /></Link>
+            </SchoolLink>
+            
         </Right>
 
         <Left>
