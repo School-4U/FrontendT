@@ -224,7 +224,7 @@ const LoginForm = () => {
           <Button type="submit">Log In</Button>
 
           <SignUp>
-            Don't have an account? <Link to="/signup">Sign Up</Link>
+            Dont have an account? <Link to="/signup">Sign Up</Link>
           </SignUp>
 
           <Divider>
