@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
 
 body {
     font-family: 'inter', sans-serif;
+
 }
 
 img {
@@ -41,11 +42,15 @@ h2 {
     font-size: 2.5rem;
 }
 
-p {
-    font-family: 'inter', serif;
+p{
+    font-family: 'Inter Tight', sans-serif;
     font-weight: 400;
 }
 
-`;
 
+
+`
 export default GlobalStyles;
+
+
+
