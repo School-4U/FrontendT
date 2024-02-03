@@ -2,7 +2,7 @@ import { Container } from "./components/styles/Container.styled";
 import GlobalStyles from "./components/styles/Global";
 import { Home, About, Contact, Login, Verification } from "./pages/Main";
 import { Routes, Route } from "react-router-dom";
-import { Header } from "./components/Header";
+import  Header  from "./components/Header";
 import { Popup } from "./components/Popup";
 
 
