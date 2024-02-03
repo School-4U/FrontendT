@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Content, PopupContainer} from "./styles/Container.styled";
-// import {Header} from "./Header";
+import { Content, PopupButton, PopupContainer, PopupValue, Image} from "./styles/Container.styled";
+import { SignB } from "./styles/Header.styled";
+
 
 export const Popup = () => {
     const [Open, SetOpen] = useState(true)
@@ -12,13 +13,21 @@ export const Popup = () => {
     <>
     {Open &&(
       <>
-      {/* <Header /> */}
         <PopupContainer>
          <Content>
-        <h4>Select Type of User</h4>
-        <button>Parent</button>
-        <button>Student</button>
+          <PopupValue>
+            <Image />
+            
+          <h4>Select Type of User</h4>
+           <div className="buttons">
+           <SignB>Parent</SignB>
+        <PopupButton>School Owner</PopupButton>
         <button onClick={togglePopup}>Close</button>
+           </div>
+
+          </PopupValue>
+       
+       
         </Content>
         </PopupContainer>
         </>
