@@ -1,20 +1,34 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import GlobalStyles from "../components/styles/Global";
 
 const Container = styled.div`
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
-  padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10rem 2rem;
+  background-color: #F5F6F8;
   border-radius: 10px;
+  border: 1px solid #333;
 `;
 
 const Head = styled.div`
-
   & h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: #000;
+  }
+
+  & h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #000;
+  }
+
+  & p {
+    font-size: 1.3rem;
+    color: #000;
   }
 `;
 
@@ -26,13 +40,35 @@ const VerificationDigits = styled.div`
   margin: 1rem 0;
 
   & input {
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 12%;
+    height: 4rem;
     border-radius: 1rem;
+    font-size: 1.5rem;
     text-align: center;
     outline: none;
     border: 2px solid #6e7fd7;
   }
+`;
+
+const AfterDigits = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+
+  & button {
+    width: 50%;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #6e7fd7;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+
 `;
 
 const EmailVerification = () => {
@@ -51,18 +87,37 @@ const EmailVerification = () => {
     setVerificationCode(newVerificationCode);
   };
 
-  const handleKeyDown = (index, e) => {
-    if (e.key === "Backspace" && index > 0) {
-      // Move focus to the previous input box on Backspace
-      document.getElementById(`input-${index - 1}`).focus();
-    } else if (e.key === "ArrowLeft" && index > 0) {
-      // Move focus to the previous input box on ArrowLeft
-      document.getElementById(`input-${index - 1}`).focus();
-    } else if (e.key === "ArrowRight" && index < verificationCode.length - 1) {
-      // Move focus to the next input box on ArrowRight
-      document.getElementById(`input-${index + 1}`).focus();
+  const handleKeyDown = (e, index) => {
+    const { value } = e.target;
+  
+    // Limit input to a single numeric character
+    if (value.length > 1 || Number.isNaN(value)) {
+      e.preventDefault(); // Prevent invalid input
+      return;
+    }
+  
+    // Update state with the valid digit
+    setVerificationCode((prevCode) => {
+      const newCode = [...prevCode];
+      newCode[index] = value;
+      return newCode;
+    });
+  
+    // Move focus to the next empty input on digit entry
+    if (value.length === 1 && index < 5) {
+      const nextInput = document.getElementById(`input-${index + 1}`);
+      if (nextInput.value === "") {
+        nextInput.focus();
+      }
+    }
+  
+    // Move focus to the previous input on backspace
+    if (value.length === 0 && index > 0) {
+      const prevInput = document.getElementById(`input-${index - 1}`);
+      prevInput.focus();
     }
   };
+  
 
   const handleSubmit = () => {
     const code = verificationCode.join("");
@@ -72,11 +127,12 @@ const EmailVerification = () => {
 
   return (
     <Container>
+      <GlobalStyles />
       <Head>
         <h2>Email Verification</h2>
-        <h4>Enter Code</h4>
+        <h3>Enter Code</h3>
         <p>
-          Enter 6-digit code sent to <span></span>
+          Enter 6-digit code sent to <span style={{ color: "#fa9907"}}>{"someone@example.com"}</span>
         </p>
       </Head>
       <VerificationDigits>
@@ -89,12 +145,21 @@ const EmailVerification = () => {
             value={digit}
             placeholder="_"
             onChange={(e) => handleInputChange(index, e.target.value)}
-            onKeyDown={(e) => handleKeyDown(index, e)}
+            onKeyDown={(e) => handleKeyDown(e, index)}
           />
         ))}
       </VerificationDigits>
-      <button onClick={handleSubmit}>Verify</button>
-      <p>Didn't receive a code? </p>
+      <AfterDigits>
+        <button onClick={handleSubmit}>Continue</button>
+        <p>
+          Didn't receive a code?{" "}
+          <span>
+            <Link to="/popup" style={{ color: "#fa9907" }}>
+              Resend Code
+            </Link>
+          </span>
+        </p>
+      </AfterDigits>
     </Container>
   );
 };

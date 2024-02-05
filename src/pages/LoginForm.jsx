@@ -17,7 +17,7 @@ const Label = styled.label`
 const Input = styled(Field)`
   display: flex;
   justify-content: center;
-  width: 93%;
+  width: 100%;
   height: 3rem;
   padding: 0.5rem 1rem;
   margin-bottom: 0.5rem;

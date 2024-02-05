@@ -38,7 +38,7 @@ export const LoginWelcome = styled.h4`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-top: -10%;
+  margin-top: -8%;
   margin-inline: 10%;
 `;
 
