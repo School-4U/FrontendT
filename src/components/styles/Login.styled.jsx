@@ -4,7 +4,7 @@ export const ContainerDiv = styled.div`
   width: 100%;
   min-height: 100vh;
   flex-shrink: 0;
-  background: #fafafa;
+  background: #fff;
   display: flex;
   padding: 2rem;
 `;
@@ -47,7 +47,7 @@ export const LoginRight = styled.div`
   background: rgba(245, 246, 248, 0.6);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
   width: 40%;
-  padding: 3%;
+  padding: 5rem 3%;
   margin-inline: 10%;
   margin-top: 5%;
 
