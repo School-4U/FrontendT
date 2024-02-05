@@ -26,33 +26,23 @@ import { Faq } from "../components/Faq";
 import { Footer } from "../components/Footer";
 import { Link } from "react-router-dom";
 
+
 export const Home = () => {
   return (
     <Container>
       <Flex>
         <Right>
-          <h1>
-            Let’s Help You <span>Find The</span> <br />
-            Right School <span>Easily</span>
-          </h1>
-          <p>
-            School4u is a platform that helps parent match with schools that
-            meet their
-            <br />
-            criteria. Parents can input their preferences on the platform such
-            as budget, location and many more{" "}
-          </p>
-          <SearchB>
-            <FaSearch />{" "}
-            <input type="text" placeholder="What will you like to know"></input>{" "}
-            <button type="search">Search</button>
-          </SearchB>
-          <SchoolLink>
-            <Link to="/FindASchool">
-              View our Schools <FaArrowRight />
-            </Link>
-          </SchoolLink>
-        </Right>
+            <h1>Let’s Help You <span>Find The</span> <br />Right School <span>Easily</span></h1>
+            <p>School4u is a platform that helps parent match with schools that meet their<br/>criteria. Parents can input their preferences on the platform such as budget, location and many more </p>
+            <SearchB>
+                <FaSearch /> <input type="text" placeholder="What will you like to know"></input> <button type="search">Search</button>
+     
+            </SearchB>
+            <SchoolLink>
+              
+            <Link to="/findASchool">View our Schools <FaArrowRight /></Link>
+            </SchoolLink>
+          </Right>
 
         <Left>
           <img
