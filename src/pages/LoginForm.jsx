@@ -17,11 +17,11 @@ const Label = styled.label`
 const Input = styled(Field)`
   display: flex;
   justify-content: center;
-  width: 93%;
+  width: 100%;
   height: 3rem;
-  padding: 0.5rem 1rem;
+  padding: 1.8rem 1.5rem;
   margin-bottom: 0.5rem;
-  border: none;
+  border: 1px solid #6e7fd7;
   outline: none;
   font-size: 1rem;
   align-items: center;

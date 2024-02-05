@@ -3,16 +3,36 @@ import { Flex } from "../components/styles/Flex.styled";
 import { Card } from "../components/styles/Card.styled";
 import { Right, Middle, Left, Left2, Center, Hero, Right2, WhyContainer,SchoolLink, Text, SubHeading, Grid, Grid2, WhatContainer, Comments2, Comments, CommentImage, SearchB, Newsletter} from "../components/styles/Home.styled"
 import { FaSearch, FaMailBulk, FaArrowRight} from 'react-icons/fa';
+import {
+  Right,
+  Middle,
+  Left,
+  Left2,
+  Center,
+  Right2,
+  WhyContainer,
+  SchoolLink,
+  Text,
+  SubHeading,
+  Grid,
+  Grid2,
+  WhatContainer,
+  Comments,
+  Comments2,
+  CommentImage,
+  SearchB,
+  Newsletter,
+} from "../components/styles/Home.styled";
+import { FaSearch, FaMailBulk, FaArrowRight } from "react-icons/fa";
 import { Faq } from "../components/Faq";
 import { Footer } from "../components/Footer";
 import { Link } from "react-router-dom";
 
 
-
 export const Home = () => {
   return (
     <Container>
-    <Flex>
+      <Flex>
         <Right>
             <h1>Let’s Help You <span>Find The</span> <br />Right School <span>Easily</span></h1>
             <p>School4u is a platform that helps parent match with schools that meet their<br/>criteria. Parents can input their preferences on the platform such as budget, location and many more </p>
@@ -26,14 +46,13 @@ export const Home = () => {
             </SchoolLink>
           </Right>
 
-          <Left>
-            <img
-              src="assets/lady2.jpg"
-              alt="portrait-charming-friendly-polite-happy-african-american-adult-woman-blouse-tilting-head-smiling-broadly-showing-ok"
-            ></img>
-          </Left>
-        </Flex>
-
+        <Left>
+          <img
+            src="assets/lady2.jpg"
+            alt="portrait-charming-friendly-polite-happy-african-american-adult-woman-blouse-tilting-head-smiling-broadly-showing-ok"
+          ></img>
+        </Left>
+      </Flex>
         <Hero>
           <Right2>
             <h2>2K+</h2>
@@ -48,41 +67,52 @@ export const Home = () => {
             <p>Schools</p>
           </Left2>
         </Hero>
-    
+      
+      <WhyContainer>Why Choose Us?</WhyContainer>
+      <SubHeading>Check Out Some Of What Our Users Are Saying</SubHeading>
+      <Grid>
+        <Card>
+          <img src="assets/Time.svg" />
+          <h4>Saves Time</h4>
+          <p>
+            Helps save time in searching for a preferred school for your kids
+          </p>
+        </Card>
+        <Card>
+          <img src="assets/Research Icon.svg" />
+          <h4>Remote and On-site Research</h4>
+          <p>
+            The platform helps in conducting proper research for you in finding
+            the appropriate school for your kids
+          </p>
+        </Card>
+        <Card>
+          <img src="assets/Job.svg" />
+          <h4>Job Opportunities</h4>
+          <p>
+            With the use of this platform we are able to provide people with
+            jobs who provide valuable information about the school
+          </p>
+        </Card>
+      </Grid>
+      <Grid2>
+        <Card>
+          <img src="assets/Tech.svg" />
+          <h4>Job Opportunities</h4>
+          <p>
+            With the use of this platform we are able to provide people with
+            jobs who provide valuable information about the school
+          </p>
+        </Card>
+        <Card>
+          <img src="assets/Community.svg" />
+          <h4>Job Opportunities</h4>
+          <p>
+            With the use of this platform we are able to provide people with
+            jobs who provide valuable information about the school
+          </p>
+        </Card>
 
-    <WhyContainer>Why Choose Us?</WhyContainer>
-    <SubHeading>Check Out Some Of What Our Users Are Saying</SubHeading>
-    <Grid>
-        <Card>
-            <img src="assets/Time.svg"/>
-            <h4>Saves Time</h4>
-            <p>Helps save time in searching for a preferred school for your kids</p>
-
-        </Card>
-        <Card>
-        <img src="assets/Research Icon.svg"/>
-            <h4>Remote and On-site Research</h4>
-            <p>The platform helps in conducting proper research for you in finding the appropriate school for your kids</p>
-
-        </Card>
-        <Card>
-        <img src="assets/Job.svg"/>
-            <h4>Job Opportunities</h4>
-            <p>With the use of this platform we are able to provide people with jobs who provide valuable information about the school</p>
-        </Card>
-        </Grid>
-        <Grid2>
-        <Card>
-        <img src="assets/Tech.svg"/>
-            <h4>Job Opportunities</h4>
-            <p>With the use of this platform we are able to provide people with jobs who provide valuable information about the school</p>
-        </Card>
-        <Card>
-        <img src="assets/Community.svg"/>
-            <h4>Job Opportunities</h4>
-            <p>With the use of this platform we are able to provide people with jobs who provide valuable information about the school</p>
-       
-        </Card>
         </Grid2>
   
     <WhatContainer>
@@ -128,6 +158,9 @@ export const Home = () => {
  
       </Container>
     
+    );
   );
-};
+    
 
+     
+        

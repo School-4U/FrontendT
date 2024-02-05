@@ -7,6 +7,7 @@ import { NavLink } from 'react-router-dom';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 
+
 export default function Header() {
   const [active, setActive] = useState(false);
   const close = () =>{
@@ -43,3 +44,4 @@ export default function Header() {
     </StyledHeader>
   );
 }
+
