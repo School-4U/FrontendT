@@ -24,6 +24,7 @@ function App() {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           {/* <Route path="/signup" element={<Signup />} /> */}
+          {/* Include a popup page after email verification */}
           <Route path="/popup" element={<Popup />} />
           <Route path="/verification" element={<Verification />} />
           <Route path="*" element={<h1>Page Not Found</h1>} />

@@ -23,8 +23,8 @@ gap: 50px;
 
 `
 export const Logo = styled.img`
-width: 145px;
-height: 32px;
+width: auto;
+height: 2.5rem;
 margin-left: 20px;
 
 `
