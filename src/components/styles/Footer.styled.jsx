@@ -7,6 +7,10 @@ export const StyledFooter = styled.footer`
   padding: 50px;
   background: #2B40B4;
 
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+    grid-template-columns: 1fr;
+  }
+
  
 `
 
