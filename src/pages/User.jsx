@@ -32,7 +32,7 @@ const clientId =
       const validationSchema = Yup.object({
         schoolName: Yup.string().required("Required"),
         email: Yup.string().email("Invalid email address").required("Required"),
-        location: Yup.string().location("Location is Required"),
+        location: Yup.string().required("Location is Required"),
         password: Yup.string()
           .min(8, "Password must be at least 8 characters")
           .required("Required"),

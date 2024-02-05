@@ -1,7 +1,7 @@
 import { Container } from "../components/styles/Container.styled";
 import { Flex } from "../components/styles/Flex.styled";
 import { Card } from "../components/styles/Card.styled";
-import { Right, Middle, Left, Left2, Center, Right2, WhyContainer,SchoolLink, Text, SubHeading, Grid, Grid2, WhatContainer, Comments, Comments2, CommentImage, SearchB, Newsletter} from "../components/styles/Home.styled"
+import { Right, Middle, Left, Left2, Center, Hero, Right2, WhyContainer,SchoolLink, Text, SubHeading, Grid, Grid2, WhatContainer, Comments2, Comments, CommentImage, SearchB, Newsletter} from "../components/styles/Home.styled"
 import { FaSearch, FaMailBulk, FaArrowRight} from 'react-icons/fa';
 import { Faq } from "../components/Faq";
 import { Footer } from "../components/Footer";
@@ -34,7 +34,7 @@ export const Home = () => {
           </Left>
         </Flex>
 
-        <Flex>
+        <Hero>
           <Right2>
             <h2>2K+</h2>
             <p>Current Users</p>
@@ -47,7 +47,7 @@ export const Home = () => {
             <h2>300+</h2>
             <p>Schools</p>
           </Left2>
-        </Flex>
+        </Hero>
     
 
     <WhyContainer>Why Choose Us?</WhyContainer>
@@ -84,11 +84,13 @@ export const Home = () => {
        
         </Card>
         </Grid2>
+  
     <WhatContainer>
         <p>What People Say About Us?</p>
     <h3>Some reviews from some of our users</h3>
    
    <Flex>
+  
     <Comments>
         <CommentImage src="assets/rename.png" alt='quote' />
         <h5>School4u has helped me save maximum time by providing the best means of finding a school for my kid</h5>
@@ -107,6 +109,7 @@ export const Home = () => {
     
     </Comments>
     <hr />
+    
     </Flex>
   
    </WhatContainer>
