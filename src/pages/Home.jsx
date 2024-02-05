@@ -20,7 +20,7 @@ export const Home = () => {
      
             </SearchB>
             <SchoolLink>
-            <Link to="/FindASchool">View our Schools <FaArrowRight /></Link>
+            <Link to="/findASchool">View our Schools <FaArrowRight /></Link>
             </SchoolLink>
           </Right>
 
