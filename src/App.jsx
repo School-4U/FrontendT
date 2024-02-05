@@ -6,13 +6,14 @@ import {
   Contact,
   Login,
   Verification,
+  User,
   // Signup
 } from "./pages/Main";
 import { Routes, Route } from "react-router-dom";
 import  Header from "./components/Header";
 import { Popup } from "./components/Popup";
 import { FindASchool } from "./pages/FindASchool";
-// import { Parent } from "./pages/Parent";
+import { Parent } from "./pages/Parent";
 
 function App() {
   return (
