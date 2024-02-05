@@ -9,7 +9,8 @@ import { GoogleLogin } from "@react-oauth/google";
 const clientId =
   "193762191190-fgbm80sm4g6mam8pnjgs5fjvo6klcbik.apps.googleusercontent.com";
 
-  export const School = () => {
+  export const User = () => {
+    
     const onSuccess = (response) => {
         console.log("Google login success:", response);
         // Handle success (e.g., update state, authenticate user, etc.)

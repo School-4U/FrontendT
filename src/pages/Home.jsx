@@ -8,6 +8,7 @@ import { Footer } from "../components/Footer";
 import { Link } from "react-router-dom";
 
 
+
 export const Home = () => {
   return (
     <Container>
@@ -20,6 +21,7 @@ export const Home = () => {
      
             </SearchB>
             <SchoolLink>
+              
             <Link to="/findASchool">View our Schools <FaArrowRight /></Link>
             </SchoolLink>
           </Right>

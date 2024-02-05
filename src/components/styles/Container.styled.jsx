@@ -8,69 +8,91 @@ export const Container = styled.div`
     padding: 10px
 `
 export const PopupContainer = styled.div`
-    position: fixed;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-image: url('assets/placeholder.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.1); 
+      border-radius: 5px;
+    }
+   
   `
   
   export const Content = styled.div`
-  height: 80%;
-  width: 90%;
-  max-width: 1318px;
-  max-height: 1132px;
   position: relative;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  `
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.9);
 
-  export const PopupValue = styled.div`
-  padding: 30px;
 
-  h4{
-      font-weight: 42px;
-      font-family: 'Inter Tight', sans-serif;
-      font-weight: 700;
-      padding-bottom: 15px;
+  p{
+    font-size: 2.2em;
+    font-weight: bold;
+    color: black
   }
 
-  .buttons {
-    display: flex;
-    gap: 20px;
+
+  `
+  export const Popups = styled.div`
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+  `
+
+//   export const PopupValue = styled.div`
+//   padding: 30px;
+
+//   h4{
+//       font-weight: 42px;
+//       font-family: 'Inter Tight', sans-serif;
+//       font-weight: 700;
+//       padding-bottom: 15px;
+//   }
+
+//   .buttons {
+//     display: flex;
+//     gap: 20px;
 
  
-}
+// }
   
-  `
+//   `
 
-  export const Image = styled.div`
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  bottom: 0;
-  opacity:0.1;
-  background-image: url('assets/placeholder.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  `
+//   export const Image = styled.div`
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 0;
+//   bottom: 0;
+//   opacity:0.1;
+//   
+//   `
   export const PopupButton = styled.div`
   background: orange;
   color: white;
   padding: 10px; 20px;
+  z-index: 2;
   border-radius: 10px;
+  cursor: pointer;
   `
   
  
