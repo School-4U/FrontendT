@@ -1,4 +1,4 @@
-import { Container, Title, Formgroup, StyledField,FormContainer,FormButton,ButtonLink,StyledP, Lines,Line,} from "../components/styles/Signup.styled";
+import { Container, Formgroup, StyledField,FormContainer,FormButton,ButtonLink,StyledP, Lines} from "../components/styles/Signup.styled";
 import { Formik, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { GoogleLogin } from "@react-oauth/google";
@@ -49,9 +49,6 @@ const clientId =
 
       return(
             <Container>
-              <Title>
-                School<span>4U</span>
-              </Title>
         
               <Formik
                 initialValues={initialValues}
@@ -117,9 +114,9 @@ const clientId =
                   </StyledP>
                   {     
                 <Lines>
-                  <Line />
-                  <p>Or</p>
-                  <Line />
+                  <img src="assets/Line 3.svg"></img>
+                  <p> Or </p>
+                  <img src="assets/Line 3.svg"></img>
                 </Lines> }
         
                   <div id="SignInButton">
