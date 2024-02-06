@@ -49,8 +49,5 @@ p{
 
 
 
-`
+`;
 export default GlobalStyles;
-
-
-

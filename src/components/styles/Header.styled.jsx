@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.header `
-    padding: 20px;
-    margin: 20px auto 0;
+    padding: 1.125rem;
+    margin: 1.125rem auto 0;
     // position: sticky;
     // top: 0;
 
@@ -80,7 +80,7 @@ span{
 
 }
 
-@media screen and (max-width: 765px){
+@media screen and (max-width: 768px){
 display: flex;
 
 }

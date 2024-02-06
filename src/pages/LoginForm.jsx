@@ -9,6 +9,11 @@ const FormGroup = styled.div`
   margin-bottom: 15px;
 `;
 
+const Login = styled.h2`
+  color: #000;
+  font-style: 3rem;
+`;
+
 const Label = styled.label`
   font-weight: bold;
   margin-bottom: 5px;
@@ -17,7 +22,7 @@ const Label = styled.label`
 const Input = styled(Field)`
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 100%; 
   height: 3rem;
   padding: 1.8rem 1.5rem;
   margin-bottom: 0.5rem;
@@ -182,7 +187,7 @@ const LoginForm = () => {
 
   return (
     <>
-      <h2>Log In</h2>
+      <Login>Log In</Login>
       <Formik
         initialValues={{ email: "", password: "" }}
         validationSchema={validationSchema}
