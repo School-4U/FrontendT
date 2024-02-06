@@ -1,29 +1,8 @@
 import { Container } from "../components/styles/Container.styled";
 import { Flex } from "../components/styles/Flex.styled";
 import { Card } from "../components/styles/Card.styled";
-import { Right, Middle, Left, Left2, Center, Hero, Right2, WhyContainer,SchoolLink, Text, SubHeading, Grid, Grid2, WhatContainer, Comments2, Comments, CommentImage, SearchB, Newsletter} from "../components/styles/Home.styled"
+import { Right, Middle, Left, Left2, Center, Hero, Right2, WhyContainer,SchoolLink, Text, SubHeading, Grid, Grid2, WhatContainer, Comments2, Comments, CommentImage, SearchB, Newsletter} from "../components/styles/Home.styled";
 import { FaSearch, FaMailBulk, FaArrowRight} from 'react-icons/fa';
-import {
-  Right,
-  Middle,
-  Left,
-  Left2,
-  Center,
-  Right2,
-  WhyContainer,
-  SchoolLink,
-  Text,
-  SubHeading,
-  Grid,
-  Grid2,
-  WhatContainer,
-  Comments,
-  Comments2,
-  CommentImage,
-  SearchB,
-  Newsletter,
-} from "../components/styles/Home.styled";
-import { FaSearch, FaMailBulk, FaArrowRight } from "react-icons/fa";
 import { Faq } from "../components/Faq";
 import { Footer } from "../components/Footer";
 import { Link } from "react-router-dom";
@@ -159,7 +138,7 @@ export const Home = () => {
       </Container>
     
     );
-  );
+};
     
 
      
