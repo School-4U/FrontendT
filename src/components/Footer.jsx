@@ -22,16 +22,16 @@ export const Footer = () => {
           <SVGLogo />
           <h5 style={{ marginTop: "1rem" }}>Follow us</h5>
           <div style={{ fontSize: "2rem", marginTop: "1rem" }}>
-            <Link href="https://www.facebook.com/" target="_blank">
+            <Link href="https://www.facebook.com/school4u" target="_blank">
               <FaFacebook style={{ marginRight: "1rem", color: "#fff" }} />
             </Link>
-            <Link href="https://www.instagram.com/" target="_blank">
+            <Link href="https://www.instagram.com/school4u" target="_blank">
               <FaInstagram style={{ marginRight: "1rem", color: "#fff" }} />
             </Link>
-            <Link href="https://www.twitter.com/" target="_blank">
+            <Link href="https://www.twitter.com/school4u" target="_blank">
               <FaTwitter style={{ marginRight: "1rem", color: "#fff" }} />
             </Link>
-            <Link href="https://www.linkedin.com/" target="_blank">
+            <Link href="https://www.linkedin.com/school4u" target="_blank">
               <FaLinkedinIn style={{ marginRight: "1rem", color: "#fff" }} />
             </Link>
           </div>
