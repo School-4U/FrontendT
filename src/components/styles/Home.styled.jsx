@@ -42,6 +42,15 @@ padding: 0 20px;
    
 `
 
+export const SideMargin = styled.div`
+  margin-inline: auto;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+
 export const Middle = styled.div`
 flex: 1;
 border-right: 2px solid #6E7FD7;
@@ -174,17 +183,19 @@ border: 1px solid black;
 border-radius: 8px;
 background: white;
 padding: 0 0 0 20px;
-width: 400px;
+width: 500px;
 display: flex;
 justify-content: space-between;
 align-items: center;
 margin-top: 15px;
+font-size: 1.1rem;
 
 input[type="email"]{
   border: none;
   outline: none;
-  flex: 1
+  flex: 1;
   margin-left: 9px;
+  height: 3rem;
 }
 
 button {
@@ -193,6 +204,7 @@ button {
   color: white;
   padding: 10px 12px;
   cursor: pointer;
+  height: 2.95rem;
   
 }
 `

@@ -4,17 +4,37 @@ import {
   FooterLeft,
   Copy,
 } from "./styles/Footer.styled";
-import { FaCopyright } from "react-icons/fa";
+import SVGLogo from "../../public/assets/SVGLogo";
+import {
+  FaCopyright,
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedinIn,
+} from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
     <>
       <StyledFooter>
         <FooterRight>
-          <h1>
-            School<span>4U</span>
-          </h1>
-          <h5>Follow us</h5>
+          <SVGLogo />
+          <h5 style={{ marginTop: "1rem" }}>Follow us</h5>
+          <div style={{ fontSize: "2rem", marginTop: "1rem" }}>
+            <Link href="https://www.facebook.com/" target="_blank">
+              <FaFacebook style={{ marginRight: "1rem", color: "#fff" }} />
+            </Link>
+            <Link href="https://www.instagram.com/" target="_blank">
+              <FaInstagram style={{ marginRight: "1rem", color: "#fff" }} />
+            </Link>
+            <Link href="https://www.twitter.com/" target="_blank">
+              <FaTwitter style={{ marginRight: "1rem", color: "#fff" }} />
+            </Link>
+            <Link href="https://www.linkedin.com/" target="_blank">
+              <FaLinkedinIn style={{ marginRight: "1rem", color: "#fff" }} />
+            </Link>
+          </div>
         </FooterRight>
         <FooterLeft>
           <ul>

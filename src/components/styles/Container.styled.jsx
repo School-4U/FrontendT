@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 1440px;
+  width: 100%;
   max-width: 100%;
   background-color: white;
   margin: 0 auto;
-  padding: 10px;
+  padding: 10px 0;
 `;
+
 export const PopupContainer = styled.div`
   background-image: url("assets/placeholder.svg");
   background-repeat: no-repeat;

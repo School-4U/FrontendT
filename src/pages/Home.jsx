@@ -20,52 +20,70 @@ import {
   CommentImage,
   SearchB,
   Newsletter,
+  SideMargin,
 } from "../components/styles/Home.styled";
 import { FaSearch, FaMailBulk, FaArrowRight } from "react-icons/fa";
 import { Faq } from "../components/Faq";
 import { Footer } from "../components/Footer";
 import { Link } from "react-router-dom";
 
-
 export const Home = () => {
   return (
     <Container>
-      <Flex>
-        <Right>
-            <h1>Let’s Help You <span>Find The</span> <br />Right School <span>Easily</span></h1>
-            <p>School4u is a platform that helps parent match with schools that meet their<br/>criteria. Parents can input their preferences on the platform such as budget, location and many more </p>
+      <SideMargin>
+      <div>
+        <Flex>
+          <Right>
+            <h1>
+              Let’s Help You <span>Find The</span> <br />
+              Right School <span>Easily</span>
+            </h1>
+            <p>
+              School4u is a platform that helps parent match with schools that
+              meet their
+              <br />
+              criteria. Parents can input their preferences on the platform such
+              as budget, location and many more{" "}
+            </p>
             <SearchB>
-                <FaSearch /> <input type="text" placeholder="What will you like to know"></input> <button type="search">Search</button>
-     
+              <FaSearch />{" "}
+              <input
+                type="text"
+                placeholder="What will you like to know"
+              ></input>{" "}
+              <button type="search">Search</button>
             </SearchB>
             <SchoolLink>
-              
-            <Link to="/findASchool">View our Schools <FaArrowRight /></Link>
+              <Link to="/findASchool">
+                View our Schools <FaArrowRight />
+              </Link>
             </SchoolLink>
           </Right>
 
-        <Left>
-          <img
-            src="assets/lady2.jpg"
-            alt="portrait-charming-friendly-polite-happy-african-american-adult-woman-blouse-tilting-head-smiling-broadly-showing-ok"
-          ></img>
-        </Left>
-      </Flex>
+          <Left>
+            <img
+              src="assets/lady2.jpg"
+              alt="portrait-charming-friendly-polite-happy-african-american-adult-woman-blouse-tilting-head-smiling-broadly-showing-ok"
+            ></img>
+          </Left>
+        </Flex>
 
-      <Flex>
-        <Right2>
-          <h2>2K+</h2>
-          <p>Current Users</p>
-        </Right2>
-        <Middle>
-          <h2>10</h2>
-          <p>Current Partners</p>
-        </Middle>
-        <Left2>
-          <h2>300+</h2>
-          <p>Schools</p>
-        </Left2>
-      </Flex>
+        <Flex>
+          <Right2>
+            <h2>2K+</h2>
+            <p>Current Users</p>
+          </Right2>
+          <Middle>
+            <h2>10</h2>
+            <p>Current Partners</p>
+          </Middle>
+          <Left2>
+            <h2>300+</h2>
+            <p>Schools</p>
+          </Left2>
+        </Flex>
+        </div>
+      </SideMargin>
 
       <WhyContainer>Why Choose Us?</WhyContainer>
       <SubHeading>Check Out Some Of What Our Users Are Saying</SubHeading>
@@ -144,24 +162,29 @@ export const Home = () => {
           <hr />
         </Flex>
       </WhatContainer>
-      <WhyContainer>Frequently Asked Questions</WhyContainer>
-      <SubHeading>
-        Check Some frequently asked questions by Our Users
-      </SubHeading>
-      <Faq />
-      <WhyContainer>Newsletter</WhyContainer>
-      <Text>
-        Subscribe to our newsletter to get important updates on new schools that
-        might meet your criteria. We offer the <br /> best solutions for
-        difficulties in finding a desired school
-      </Text>
-      <Center>
-        <Newsletter>
-          <FaMailBulk />{" "}
-          <input type="email" placeholder="mallymirabel@gmail.com"></input>{" "}
-          <button type="search">Subscribe</button>
-        </Newsletter>
-      </Center>
+
+      <SideMargin>
+      <div>
+        <WhyContainer>Frequently Asked Questions</WhyContainer>
+        <SubHeading>
+          Check Some frequently asked questions by Our Users
+        </SubHeading>
+        <Faq />
+        <WhyContainer>Newsletter</WhyContainer>
+        <Text>
+          Subscribe to our newsletter to get important updates on new schools
+          that might meet your criteria. We offer the <br /> best solutions for
+          difficulties in finding a desired school
+        </Text>
+        <Center>
+          <Newsletter>
+            <FaMailBulk />{" "}
+            <input type="email" placeholder="mallymirabel@gmail.com"></input>{" "}
+            <button type="search">Subscribe</button>
+          </Newsletter>
+        </Center>
+        </div>
+      </SideMargin>
       <Footer />
     </Container>
   );
