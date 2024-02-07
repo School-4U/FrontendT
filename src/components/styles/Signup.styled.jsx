@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Field } from 'formik'
 import { Link } from "react-router-dom";
 
+
 export const  SignUp = styled.div`
     width: 1440px;
     max-width: 100%;
@@ -45,13 +46,11 @@ export const FormContainer = styled.div`
     padding: 10px 0;
     
   }
-`;
+`
 export const Formgroup = styled.div`
 margin-bottom: 18px;
 
-
-
-`;
+`
 
 export const StyledField = styled(Field)`
 width: 100%;
@@ -108,6 +107,7 @@ p{
 }
 
 `
+
 export const StyledSignInButton = styled.div`
   display: flex;
   align-items: center;

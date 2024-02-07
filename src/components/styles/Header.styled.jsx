@@ -36,8 +36,6 @@ li{
     z-index: 100;
 }
 
-
-
 `
 export const Logo = styled.img`
 width: auto;
@@ -60,8 +58,6 @@ font-weight: 400;
     gap: 20px;
 }
 
-
-
 `
 export const Button = styled.button`
     border: 1px solid black;
@@ -69,6 +65,7 @@ export const Button = styled.button`
     cursor: pointer;
     background: white;
     padding: 10px 20px;
+    
 
 &:hover{
     background:  #6E7FD7;
@@ -87,7 +84,9 @@ export const SignB = styled.button`
     background: #6E7FD7;
     padding: 10px 20px;
     color: white;
+
 `
+
 export const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
 display: none;
 position: absolute;
@@ -103,6 +102,7 @@ cursor: pointer;
 }
 
 `
+
 
    
 

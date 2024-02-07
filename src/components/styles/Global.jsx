@@ -46,8 +46,5 @@ p{
     font-family: 'Inter Tight', sans-serif;
     font-weight: 400;
 }
-
-
-
-`;
+`
 export default GlobalStyles;

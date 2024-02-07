@@ -54,7 +54,6 @@ padding: 70px
 export const Left = styled.div`
 padding: 0 20px;
 `
-
 export const Hero = styled.div`
  display: flex;
  align-items: center;
@@ -113,7 +112,6 @@ margin: 0 300px;
 @media screen and (min-width: 768px) and (max-width: 1200px){
   margin: 0 10px;
 }
-
 
 `
 export const WhatContainer = styled.div`

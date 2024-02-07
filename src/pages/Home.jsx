@@ -1,27 +1,8 @@
 import { Container } from "../components/styles/Container.styled";
 import { Flex } from "../components/styles/Flex.styled";
 import { Card } from "../components/styles/Card.styled";
-import {
-  Right,
-  Middle,
-  Left,
-  Left2,
-  Center,
-  Right2,
-  WhyContainer,
-  SchoolLink,
-  Text,
-  SubHeading,
-  Grid,
-  Grid2,
-  WhatContainer,
-  Comments,
-  Comments2,
-  CommentImage,
-  SearchB,
-  Newsletter,
-} from "../components/styles/Home.styled";
-import { FaSearch, FaMailBulk, FaArrowRight } from "react-icons/fa";
+import { Right, Middle, Left, Left2, Center, Hero, Right2, WhyContainer,SchoolLink, Text, SubHeading, Grid, Grid2, WhatContainer, Comments2, Comments, CommentImage, SearchB, Newsletter} from "../components/styles/Home.styled";
+import { FaSearch, FaMailBulk, FaArrowRight} from 'react-icons/fa';
 import { Faq } from "../components/Faq";
 import { Footer } from "../components/Footer";
 import { Link } from "react-router-dom";
@@ -56,16 +37,15 @@ export const Home = () => {
               </Link>
             </SchoolLink>
           </Right>
-
-          <Left>
-            <img
-              src="assets/lady2.jpg"
-              alt="portrait-charming-friendly-polite-happy-african-american-adult-woman-blouse-tilting-head-smiling-broadly-showing-ok"
-            ></img>
-          </Left>
-        </Flex>
-
-        <Flex>
+       
+        <Left>
+          <img
+            src="assets/lady2.jpg"
+            alt="portrait-charming-friendly-polite-happy-african-american-adult-woman-blouse-tilting-head-smiling-broadly-showing-ok"
+          ></img>
+        </Left>
+      </Flex>
+        <Hero>
           <Right2>
             <h2>2K+</h2>
             <p>Current Users</p>
@@ -79,7 +59,8 @@ export const Home = () => {
             <p>Schools</p>
           </Left2>
         </Flex>
-
+        </Hero>
+ 
       <WhyContainer>Why Choose Us?</WhyContainer>
       <SubHeading>Check Out Some Of What Our Users Are Saying</SubHeading>
       <Grid>
@@ -124,11 +105,10 @@ export const Home = () => {
             jobs who provide valuable information about the school
           </p>
         </Card>
-      </Grid2>
+      </Grid2
       <WhatContainer>
         <p>What People Say About Us?</p>
-        <h3>Some reviews from some of our users</h3>
-
+    <h3>Some reviews from some of our users</h3>
         <Flex>
           <Comments>
             <CommentImage src="assets/rename.png" alt="quote" />
@@ -180,3 +160,7 @@ export const Home = () => {
     </Container>
   );
 };
+    
+
+     
+        
