@@ -1,7 +1,9 @@
-import { Container, Formgroup, StyledField,FormContainer,FormButton,ButtonLink,StyledP, Lines,Line,} from "../components/styles/Signup.styled";
+import { Container, Formgroup, StyledField,FormContainer,FormButton,ButtonLink,StyledP,Lines, StyledSignInButton} from "../components/styles/Signup.styled";
 import { Formik, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { GoogleLogin } from "@react-oauth/google";
+import { GoogleOAuthProvider } from "@react-oauth/google";
+
 
 
 //   Form to be filled by School Owners
@@ -49,6 +51,7 @@ const clientId =
     
 
       return(
+        <GoogleOAuthProvider clientId={clientId}>
             <Container>
               <Formik
                 initialValues={initialValues}
@@ -111,14 +114,13 @@ const clientId =
                   <StyledP>
                     Already have an account? <ButtonLink to="/login">Log In</ButtonLink>
                   </StyledP>
-                  {     
-                <Lines>
-                  <Line />
-                  <p>Or</p>
-                  <Line />
-                </Lines> }
+                  <Lines>
+                  <img src="assets/Line 3.svg"></img>
+                  <p> Or </p>
+                  <img src="assets/Line 3.svg"></img>
+                </Lines> 
         
-                  <div id="SignInButton">
+                  <StyledSignInButton id="SignInButton">
                     <GoogleLogin
                       clientId={clientId}
                       buttonText="Login"
@@ -126,11 +128,13 @@ const clientId =
                       onFailure={onFailure}
                       cookiePolicy={"single_host_origin"}
                       isSignedIn={true}
+                      
                     />
-                  </div>
+                  </StyledSignInButton>
                 </FormContainer>
               </Formik>
             </Container>
+            </GoogleOAuthProvider>
       );
 
   };

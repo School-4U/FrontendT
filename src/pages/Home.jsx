@@ -20,7 +20,6 @@ import {
   CommentImage,
   SearchB,
   Newsletter,
-  SideMargin,
 } from "../components/styles/Home.styled";
 import { FaSearch, FaMailBulk, FaArrowRight } from "react-icons/fa";
 import { Faq } from "../components/Faq";
@@ -30,8 +29,6 @@ import { Link } from "react-router-dom";
 export const Home = () => {
   return (
     <Container>
-      <SideMargin>
-      <div>
         <Flex>
           <Right>
             <h1>
@@ -46,11 +43,11 @@ export const Home = () => {
               as budget, location and many more{" "}
             </p>
             <SearchB>
-              <FaSearch />{" "}
+              <FaSearch />
               <input
                 type="text"
                 placeholder="What will you like to know"
-              ></input>{" "}
+              ></input>
               <button type="search">Search</button>
             </SearchB>
             <SchoolLink>
@@ -82,8 +79,6 @@ export const Home = () => {
             <p>Schools</p>
           </Left2>
         </Flex>
-        </div>
-      </SideMargin>
 
       <WhyContainer>Why Choose Us?</WhyContainer>
       <SubHeading>Check Out Some Of What Our Users Are Saying</SubHeading>
@@ -163,8 +158,6 @@ export const Home = () => {
         </Flex>
       </WhatContainer>
 
-      <SideMargin>
-      <div>
         <WhyContainer>Frequently Asked Questions</WhyContainer>
         <SubHeading>
           Check Some frequently asked questions by Our Users
@@ -178,13 +171,11 @@ export const Home = () => {
         </Text>
         <Center>
           <Newsletter>
-            <FaMailBulk />{" "}
+            <FaMailBulk />
             <input type="email" placeholder="mallymirabel@gmail.com"></input>{" "}
             <button type="search">Subscribe</button>
           </Newsletter>
         </Center>
-        </div>
-      </SideMargin>
       <Footer />
     </Container>
   );

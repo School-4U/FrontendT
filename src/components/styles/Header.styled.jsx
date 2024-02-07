@@ -1,10 +1,9 @@
 import styled from "styled-components";
+import  { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export const StyledHeader = styled.header `
     padding: 1.125rem;
     margin: 1.125rem auto 0;
-    // position: sticky;
-    // top: 0;
 
 `
 
@@ -12,13 +11,31 @@ export const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (min-width: 768px) and (max-width: 1200px){
+        flex-direction: column;
+    }
    
 `
 export const Linkul = styled.ul`
+position: relative;
 display: flex;
 align-items: center;
 width: 600px;
 gap: 50px;
+
+li{
+    margin: 1.5rem auto;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) and  (max-width: 1200px){
+    display: ${(props) => (props.active ? "block" : "none")};
+    background: orange;
+    margin-top: 30px;
+    z-index: 100;
+}
+
 
 
 `
@@ -26,6 +43,7 @@ export const Logo = styled.img`
 width: auto;
 height: 2.5rem;
 margin-left: 20px;
+align-self: start;
 
 `
 export const StyledButtons = styled.div`
@@ -35,6 +53,13 @@ padding: 10px;
 gap: 50px;
 font-family: 'Inter Tight', sans-serif;
 font-weight: 400;
+
+@media screen and (min-width: 768px) and (max-width: 1200px){
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+}
+
 
 
 `
@@ -50,6 +75,10 @@ export const Button = styled.button`
     color: white; 
 }
 
+@media screen and (min-width: 768px) and (max-width: 1200px){
+    width: 90px;
+    margin: auto;
+}
 `
 export const SignB = styled.button`
     border: none;
@@ -59,34 +88,21 @@ export const SignB = styled.button`
     padding: 10px 20px;
     color: white;
 `
-export const MobileScreen = styled.div`
+export const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
 display: none;
 position: absolute;
-top: 3.5rem;
-right: 2.75rem;
-flex-direction: column;
-justify-content: space-between;
-width: 2.25rem;
-height: 2rem;
-background-color: #fff; /* Add a background color temporarily */
-//   z-index: 999;
+right: 50px;
+top: 55px;
+color: orange;
+font-size: 1.8rem;
+cursor: pointer;
+@media screen and (min-width: 768px) and (max-width: 1200px){
+    display: block;
 
-span{
-    height: 0.5rem;
-    width: 100%;
-    background: green;
-    border-radius: 2rem;
-    margin-bottom: 0.3rem;
-
-}
-
-@media screen and (max-width: 768px){
-display: flex;
 
 }
 
 `
-
 
    
 

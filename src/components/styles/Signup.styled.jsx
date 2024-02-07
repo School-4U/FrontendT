@@ -108,8 +108,11 @@ p{
 }
 
 `
-export const Line = styled.div`
-border-top: 1px solid black;
-flex-grow: 1;
-border: none;
-`
+export const StyledSignInButton = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+`;
+

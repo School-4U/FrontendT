@@ -51,37 +51,8 @@ export const Popups = styled.div`
   display: flex;
   gap: 30px;
   margin-top: 20px;
-`;
+`
 
-//   export const PopupValue = styled.div`
-//   padding: 30px;
-
-//   h4{
-//       font-weight: 42px;
-//       font-family: 'Inter Tight', sans-serif;
-//       font-weight: 700;
-//       padding-bottom: 15px;
-//   }
-
-//   .buttons {
-//     display: flex;
-//     gap: 20px;
-
-// }
-
-//   `
-
-//   export const Image = styled.div`
-//   position: absolute;
-//   left: 0;
-//   top: 0;
-//   width: 100%;
-//   height: 100%;
-//   z-index: 0;
-//   bottom: 0;
-//   opacity:0.1;
-//
-//   `
 export const PopupButton = styled.div`
   background: orange;
   color: white;
@@ -89,4 +60,4 @@ export const PopupButton = styled.div`
   z-index: 2;
   border-radius: 10px;
   cursor: pointer;
-  `;
+  `

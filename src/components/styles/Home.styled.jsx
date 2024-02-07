@@ -42,15 +42,6 @@ padding: 0 20px;
    
 `
 
-export const SideMargin = styled.div`
-  margin-inline: auto;
-  max-width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`
-
 export const Middle = styled.div`
 flex: 1;
 border-right: 2px solid #6E7FD7;
@@ -63,6 +54,12 @@ padding: 70px
 export const Left = styled.div`
 padding: 0 20px;
 `
+
+export const Hero = styled.div`
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ `
 
 export const Right2 = styled.div`
 flex: 1;
@@ -84,7 +81,12 @@ font-size: 52px;
 text-align:  center;
 margin-top: 90px;
 font-family: 'Inter Tight', sans-serif;
-font-weight: 700
+font-weight: 700;
+
+
+@media screen and (min-width: 768px) and (max-width: 1200px){
+  font-size: 26px;
+}
 
 `
 export const SubHeading = styled.div`
@@ -98,11 +100,20 @@ display: grid;
 grid-template-columns: repeat(3, 1fr);
 margin-top: 90px;
 
+@media screen and (min-width: 768px) and (max-width: 1200px){
+  grid-template-columns: repeat(2, 1fr);
+}
+
 `
 
 export const Grid2 = styled.div`
 display: flex;
 margin: 0 300px;
+
+@media screen and (min-width: 768px) and (max-width: 1200px){
+  margin: 0 10px;
+}
+
 
 `
 export const WhatContainer = styled.div`
@@ -116,7 +127,12 @@ P{
     text-align:  center;
     margin-top: 30px;
     font-family: 'Inter Tight', sans-serif;
-    font-weight: 700
+    font-weight: 700;
+
+    @media screen and (min-width: 768px) and (max-width: 1200px){
+      font-size: 26px;
+      margin-top: 10px;
+    }
 
 }
 
@@ -124,7 +140,12 @@ h3{
     color: white;
     text-align: center;
     margin-top: 50px;
-    font-size: 28px;
+    font-size: 18px;
+
+    @media screen and (min-width: 768px) and (max-width: 1200px){
+      font-size: 16px;
+      margin-top: 20px;
+    }
 }
 
 
@@ -141,6 +162,11 @@ color: black;
 border-radius: 16px;
 box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
 
+@media screen and (min-width: 768px) and (max-width: 1200px){
+  margin-top: 20px;
+  font-size: 18px;
+}
+
 `
 
 export const Comments2 = styled.div`
@@ -153,6 +179,11 @@ background: #7685f6;
 color: white;
 border-radius: 16px;
 box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+
+@media screen and (min-width: 768px) and (max-width: 1200px){
+  margin-top: 20px;
+  font-size: 18px;
+}
 
 `
 export const CommentImage = styled.img`
@@ -183,7 +214,7 @@ border: 1px solid black;
 border-radius: 8px;
 background: white;
 padding: 0 0 0 20px;
-width: 500px;
+width: 400px;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -195,7 +226,6 @@ input[type="email"]{
   outline: none;
   flex: 1;
   margin-left: 9px;
-  height: 3rem;
 }
 
 button {
@@ -204,7 +234,6 @@ button {
   color: white;
   padding: 10px 12px;
   cursor: pointer;
-  height: 2.95rem;
   
 }
 `

@@ -1,7 +1,8 @@
-import { Container, Formgroup, StyledField,FormContainer,FormButton,ButtonLink,StyledP, Lines} from "../components/styles/Signup.styled";
+
+import { Container, Formgroup, StyledField,FormContainer,FormButton,ButtonLink,StyledP, Lines, StyledSignInButton} from "../components/styles/Signup.styled";
 import { Formik, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { GoogleLogin } from "@react-oauth/google";
+import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
 
 
 
@@ -45,9 +46,9 @@ const clientId =
         console.log("Form submitted with values:", values);
         setSubmitting(false);
       };
-    
 
       return(
+        <GoogleOAuthProvider clientId={clientId}>
             <Container>
         
               <Formik
@@ -119,19 +120,20 @@ const clientId =
                   <img src="assets/Line 3.svg"></img>
                 </Lines> }
         
-                  <div id="SignInButton">
+                  <StyledSignInButton id="SignInButton">
                     <GoogleLogin
                       clientId={clientId}
-                      buttonText="Login"
+                      buttonText="Sign Up with Google"
                       onSuccess={onSuccess}
                       onFailure={onFailure}
                       cookiePolicy={"single_host_origin"}
                       isSignedIn={true}
-                    />
-                  </div>
+                     /> 
+                  </StyledSignInButton>
                 </FormContainer>
               </Formik>
             </Container>
+            </GoogleOAuthProvider>
       );
 
   };
