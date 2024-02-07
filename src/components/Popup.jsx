@@ -19,8 +19,6 @@ export const Popup = () => {
     <NavLink to="/User">
       <PopupButton>School</PopupButton>
     </NavLink>
-    
-    
       </Popups>
       </Content>
   

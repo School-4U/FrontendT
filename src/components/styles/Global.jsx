@@ -35,6 +35,16 @@ h1 {
     font-family: 'inter', serif;
     font-weight: 900;
     font-size: 3rem;
+    @media screen and (min-width: 768px) and (max-width: 1200px){
+        padding-bottom: 1rem;
+        font-size: 2rem;
+      }
+      
+      @media screen and (min-width: 320px) and (max-width: 768px){
+        padding-bottom: 0.8rem;
+        font-size: 1.4rem;
+      
+      }
 }
 
 h2 {

@@ -9,5 +9,9 @@ export const Flex = styled.div`
     flex-direction: column;
  }
 
+ @media screen and (min-width: 320px) and (max-width: 768px){
+   flex-direction: column;
+   }
+ 
 `
 
