@@ -13,13 +13,14 @@ import {
   Text,
   SubHeading,
   Grid,
-  Grid2,
+  Hero,
   WhatContainer,
   Comments,
   Comments2,
   CommentImage,
   SearchB,
   Newsletter,
+  StyledFAQ
 } from "../components/styles/Home.styled";
 import { FaSearch, FaMailBulk, FaArrowRight } from "react-icons/fa";
 import { Faq } from "../components/Faq";
@@ -32,15 +33,14 @@ export const Home = () => {
         <Flex>
           <Right>
             <h1>
-              Let’s Help You <span>Find The</span> <br />
-              Right School <span>Easily</span>
-            </h1>
+              Let’s Help You <span>Find The</span> Right School <span>Easily</span>
+        </h1>
             <p>
               School4u is a platform that helps parent match with schools that
               meet their
               <br />
               criteria. Parents can input their preferences on the platform such
-              as budget, location and many more{" "}
+              as budget, <br/>location and many more
             </p>
             <SearchB>
               <FaSearch />
@@ -65,7 +65,7 @@ export const Home = () => {
           </Left>
         </Flex>
 
-        <Flex>
+        <Hero>
           <Right2>
             <h2>2K+</h2>
             <p>Current Users</p>
@@ -78,7 +78,7 @@ export const Home = () => {
             <h2>300+</h2>
             <p>Schools</p>
           </Left2>
-        </Flex>
+        </Hero>
 
       <WhyContainer>Why Choose Us?</WhyContainer>
       <SubHeading>Check Out Some Of What Our Users Are Saying</SubHeading>
@@ -106,8 +106,6 @@ export const Home = () => {
             jobs who provide valuable information about the school
           </p>
         </Card>
-      </Grid>
-      <Grid2>
         <Card>
           <img src="assets/Tech.svg" />
           <h4>Job Opportunities</h4>
@@ -124,7 +122,7 @@ export const Home = () => {
             jobs who provide valuable information about the school
           </p>
         </Card>
-      </Grid2>
+        </Grid>
       <WhatContainer>
         <p>What People Say About Us?</p>
         <h3>Some reviews from some of our users</h3>
@@ -151,7 +149,7 @@ export const Home = () => {
             <h5>
               School4u has changed my life. Now I do not have to worry about
               finding a suitable school for my kid because school4u has got me
-              covered{" "}
+              covered
             </h5>
           </Comments>
           <hr />
@@ -162,7 +160,10 @@ export const Home = () => {
         <SubHeading>
           Check Some frequently asked questions by Our Users
         </SubHeading>
+        <StyledFAQ>
         <Faq />
+        </StyledFAQ>
+        
         <WhyContainer>Newsletter</WhyContainer>
         <Text>
           Subscribe to our newsletter to get important updates on new schools

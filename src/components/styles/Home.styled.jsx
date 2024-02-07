@@ -38,7 +38,11 @@ button {
 export const Right = styled.div`
 display: flex;
 flex-direction: column;
-padding: 0 20px;
+padding: 0 90px;
+
+@media screen and (min-width: 768px) and (max-width: 1200px){
+  padding: 1.125rem 20px;
+}
    
 `
 
@@ -52,7 +56,7 @@ padding: 70px
 
 `
 export const Left = styled.div`
-padding: 0 20px;
+padding: 0 90px;
 `
 
 export const Hero = styled.div`
@@ -66,7 +70,9 @@ flex: 1;
 border-right: 2px solid #6E7FD7;
 text-align: center;
 margin-top: 120px;
-padding: 70px
+padding: 70px;
+
+
 `
 
 export const Left2 = styled.div`
@@ -97,11 +103,14 @@ font-weight: 400;
 `
 export const Grid = styled.div`
 display: grid;
-grid-template-columns: repeat(3, 1fr);
+grid-template-columns: repeat(3, 1fr) ;
+grid-template-rows: repeat(2, 1fr);
 margin-top: 90px;
+padding: 0 90px;
 
 @media screen and (min-width: 768px) and (max-width: 1200px){
   grid-template-columns: repeat(2, 1fr);
+  padding: 0;
 }
 
 `
@@ -196,6 +205,10 @@ export const AccordionStyle = styled.div`
 margin-top: 40px;
 
 `
+export const StyledFAQ = styled.div`
+padding: 0 90px;
+
+`
 export const StyledSection = styled(AccordionItemButton)`
 display: flex;
 justify-content: space-between;
@@ -205,6 +218,7 @@ padding: 10px;
 background-color: transparent;
 
 `
+
 export const Text = styled.div`
 margin-top: 9px;
 text-align: center

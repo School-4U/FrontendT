@@ -2,8 +2,11 @@ import styled from "styled-components";
 import  { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export const StyledHeader = styled.header `
-    padding: 1.125rem;
+    padding: 1.125rem 70px;
     margin: 1.125rem auto 0;
+    @media screen and (min-width: 768px) and (max-width: 1200px){
+        padding: 1.125rem 0;
+    }
 
 `
 
@@ -91,10 +94,10 @@ export const SignB = styled.button`
 export const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
 display: none;
 position: absolute;
-right: 50px;
-top: 55px;
+right: 40px;
+top: 36px;
 color: orange;
-font-size: 1.8rem;
+font-size: 2.8rem;
 cursor: pointer;
 @media screen and (min-width: 768px) and (max-width: 1200px){
     display: block;
