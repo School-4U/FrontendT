@@ -61,6 +61,8 @@ export const Copy = styled.div`
     @media screen and (min-width: 320px) and (max-width: 768px){
      padding: 10px 10px 0 10px;
       }
-    
+`;
 
-`
+export const FooterLogo = styled.div`
+    max-width: 100px;
+`;

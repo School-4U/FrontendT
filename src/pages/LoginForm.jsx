@@ -6,7 +6,7 @@ import { GoogleLogin } from "@react-oauth/google";
 
 
 const FormGroup = styled.div`
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 `;
 
 const Login = styled.h2`
@@ -34,6 +34,11 @@ const Input = styled(Field)`
   gap: 24px;
   flex-shrink: 0;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 1.5rem;
+  }
+
 `;
 
 const ErrorMessageStyled = styled(ErrorMessage)`
@@ -131,7 +136,6 @@ const Divider = styled.div`
 
 const Auth = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 1rem;

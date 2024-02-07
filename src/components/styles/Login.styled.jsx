@@ -15,10 +15,14 @@ export const ContainerDiv = styled.div`
     url("../../../assets/login/login-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; 
 
    @media (max-width: 768px) {
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;        
+    background: #fff;
+    background-image: none;
   }
 `;
 
@@ -29,6 +33,10 @@ export const LoginLeft = styled.div`
   padding-left: 10%;
   width: 70%;
   text-align: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 
 
   & div {
@@ -65,6 +73,10 @@ export const LoginWelcome = styled.h4`
   line-height: normal;
   margin-top: -8rem;
   /* margin-inline: 10%; */
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const LoginRight = styled.div`
@@ -75,6 +87,12 @@ export const LoginRight = styled.div`
   padding: 5rem 3%;
   margin-inline: 10%;
   margin-top: 5%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-inline: 1rem;
+    padding: 3rem 3%;
+  }
 
   & h2 {
     font-family: "Inter", sans-serif;
