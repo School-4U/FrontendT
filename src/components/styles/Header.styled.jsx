@@ -8,6 +8,10 @@ export const StyledHeader = styled.header `
         padding: 1.125rem 0;
     }
 
+    @media screen and (min-width: 320px) and (max-width: 768px){
+        padding: 1rem 0;
+    }
+
 `
 
 export const Nav = styled.nav`
@@ -37,6 +41,15 @@ li{
     background: orange;
     margin-top: 30px;
     z-index: 100;
+   
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+    display: ${(props) => (props.active ? "block" : "none")};
+    background: orange;
+    margin-top: 20px;
+    z-index: 100;
+    width: 100%;
 }
 
 `
@@ -59,6 +72,10 @@ font-weight: 400;
     grid-template-columns: 1fr;
     text-align: center;
     gap: 20px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+
 }
 
 `
@@ -101,7 +118,10 @@ cursor: pointer;
 @media screen and (min-width: 768px) and (max-width: 1200px){
     display: block;
 
+}
 
+@media screen and (min-width: 320px) and (max-width: 768px){
+    display: block
 }
 
 `

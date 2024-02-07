@@ -33,6 +33,9 @@ button {
 }
 
 
+
+
+
 `
 
 export const Right = styled.div`
@@ -43,6 +46,11 @@ padding: 0 90px;
 @media screen and (min-width: 768px) and (max-width: 1200px){
   padding: 1.125rem 20px;
 }
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+  padding: 1.125rem 10px;
+
+}
    
 `
 
@@ -52,6 +60,11 @@ border-right: 2px solid #6E7FD7;
 margin-top: 120px;
 text-align: center;
 padding: 70px
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+  margin-top: 90px;
+}
+
 
 
 `

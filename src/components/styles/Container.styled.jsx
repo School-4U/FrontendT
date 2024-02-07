@@ -6,6 +6,7 @@ export const Container = styled.div`
   background-color: white;
   margin: 0 auto;
   padding: 10px auto 0;
+
 `;
 
 export const PopupContainer = styled.div`
