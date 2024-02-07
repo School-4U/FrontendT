@@ -10,6 +10,14 @@ export const StyledFooter = styled.footer`
   @media screen and (min-width: 768px) and (max-width: 1024px){
     grid-template-columns: 1fr;
   }
+
+  
+  @media screen and (min-width: 320px) and (max-width: 768px){
+   grid-template-columns: 1fr;
+   padding: 20px;
+   margin-top: 20px;
+    }
+  
 `
 
 export const FooterRight = styled.div`
@@ -30,6 +38,11 @@ ul li{
     padding-bottom: 20px;
     color: white
 }
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+grid-template-columns: 1fr;
+  }
+
 `
 export const Copy = styled.div`
     display: grid;
@@ -41,6 +54,13 @@ export const Copy = styled.div`
     p{
         flex: 1
     }
+    @media screen and (min-width: 768px) and (max-width: 1200px){
+ 
+    }
+    
+    @media screen and (min-width: 320px) and (max-width: 768px){
+     padding: 10px 10px 0 10px;
+      }
     
 
 `

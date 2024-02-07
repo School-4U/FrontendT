@@ -18,8 +18,8 @@ background-image: url("assets/Aboutimg.jpg");
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px){
-    background-size: contain;
-    width: 100%
+    background-size: cover;
+    max-height: 400px;
 
 
 }
@@ -51,26 +51,29 @@ max-width: 500px;
 
 h1{
     font-size: 2em;
+
 }
 
    p{
-    font-size: 1.2em;
+    font-size: 1.4em;
     padding-top: 15px;
    }
 }
 @media screen and (min-width: 320px) and (max-width: 768px){
     justify-items: center;
-top: 50px;
+top: 30px;
 left: 10px;
 width: 100%;
 
+
 h1{
-    font-size: 1em;
+    font-size: 1.2em;
+    padding-top: 50px;
 }
 
    p{
-    font-size: 1.2em;
-    padding-top: 15px;
+    font-size: 1em;
+    padding-top: 10px;
    }
 
 }
@@ -92,7 +95,10 @@ h2{
 }
 
     @media screen and (min-width: 320px) and (max-width: 768px){
-        font-size: 1.2em;
+        h2{
+            margin-top: 10px;
+            font-size: 1em;
+        }
 }
 
 `
@@ -116,7 +122,8 @@ export const Right = styled.div`
 max-width: 482px;
 
 @media screen and (min-width: 320px) and (max-width: 768px){
-    width: 100%
+    width: 100%;
+    margin: 30px;
 }
 
 `
@@ -147,7 +154,7 @@ p{
 
     @media screen and (min-width: 320px) and (max-width: 768px){
         font-size: 0.8em;
-        padding-top: 5px;
+        padding-top: 10px;
     }
 }
 `
@@ -170,8 +177,8 @@ background-image: url("assets/Mission.jpg");
 
 @media screen and (min-width: 320px) and (max-width: 768px){
 
-    background-size: contain;
-    height: 400px;
+    background-size: cover;
+    max-height: 400px;
 }
 
 

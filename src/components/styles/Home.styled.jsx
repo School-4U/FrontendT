@@ -32,7 +32,20 @@ button {
   
 }
 
+@media screen and (min-width: 768px) and (max-width: 1200px){
+ 
+}
 
+@media screen and (min-width: 320px) and (max-width: 768px){
+  width: 300px;
+  input[type="text"]{
+    flex: 1;
+    margin: 5px auto;
+  }
+button{
+  padding: 5px 9px;
+}
+}
 
 
 
@@ -44,11 +57,11 @@ flex-direction: column;
 padding: 0 90px;
 
 @media screen and (min-width: 768px) and (max-width: 1200px){
-  padding: 1.125rem 20px;
+
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px){
-  padding: 1.125rem 10px;
+  padding: 20px 15px;
 
 }
    
@@ -62,7 +75,8 @@ text-align: center;
 padding: 70px
 
 @media screen and (min-width: 320px) and (max-width: 768px){
-  margin-top: 90px;
+  margin-top: 10px;
+  padding: 20px;
 }
 
 
@@ -70,11 +84,24 @@ padding: 70px
 `
 export const Left = styled.div`
 padding: 0 90px;
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+ padding: 0 30px;
+  }
+
 `
 export const Hero = styled.div`
  display: flex;
  align-items: center;
  justify-content: space-between;
+
+ @media screen and (min-width: 768px) and (max-width: 1200px){
+ 
+ }
+ 
+ @media screen and (min-width: 320px) and (max-width: 768px){
+
+ 
  `
 
 export const Right2 = styled.div`
@@ -84,6 +111,16 @@ text-align: center;
 margin-top: 120px;
 padding: 70px;
 
+@media screen and (min-width: 768px) and (max-width: 1200px){
+ 
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+
 
 `
 
@@ -92,6 +129,16 @@ flex: 1;
 text-align: center;
 margin-top: 120px;
 padding: 70px
+
+@media screen and (min-width: 768px) and (max-width: 1200px){
+ 
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+  margin-top: 20px;
+  padding: 20px;
+}
+
 
 `
 export const WhyContainer = styled.div`
@@ -105,6 +152,12 @@ font-weight: 700;
 @media screen and (min-width: 768px) and (max-width: 1200px){
   font-size: 26px;
 }
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+  font-size: 20px;
+  margin-top: 20px;
+  }
+
 
 `
 export const SubHeading = styled.div`
@@ -125,17 +178,15 @@ padding: 0 90px;
   padding: 0;
 }
 
-`
-
-export const Grid2 = styled.div`
-display: flex;
-margin: 0 300px;
-
-@media screen and (min-width: 768px) and (max-width: 1200px){
-  margin: 0 10px;
+@media screen and (min-width: 320px) and (max-width: 768px){
+grid-template-columns: 1fr;
+padding: 0 30px;
+margin-top: 30px;
 }
 
+
 `
+
 export const WhatContainer = styled.div`
 background: #6E7FD7;
 margin-top: 50px;
@@ -152,9 +203,14 @@ P{
     @media screen and (min-width: 768px) and (max-width: 1200px){
       font-size: 26px;
       margin-top: 10px;
-    }
 
-}
+    }
+      
+      @media screen and (min-width: 320px) and (max-width: 768px){
+        font-size: 20px;
+        }
+      
+    }
 
 h3{
     color: white;
@@ -166,6 +222,12 @@ h3{
       font-size: 16px;
       margin-top: 20px;
     }
+    
+    @media screen and (min-width: 320px) and (max-width: 768px){
+    font-size: 16px;
+    margin-top: 10px;
+      }
+    
 }
 
 
@@ -187,6 +249,14 @@ box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
   font-size: 18px;
 }
 
+@media screen and (min-width: 320px) and (max-width: 768px){
+  margin-top: 10px;
+  font-size: 16px;
+  padding: 20px;
+  
+  }
+
+
 `
 
 export const Comments2 = styled.div`
@@ -205,11 +275,29 @@ box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
   font-size: 18px;
 }
 
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+ font-size: 16px;
+ padding: 20px;
+ margin-top: 20px;
+  }
+
+
 `
 export const CommentImage = styled.img`
   width: 50px;
   height: 50px; 
   object-fit: cover;
+
+  @media screen and (min-width: 768px) and (max-width: 1200px){
+ 
+  }
+  
+  @media screen and (min-width: 320px) and (max-width: 768px){
+    width: 20px;
+    height: 20px;
+    }
+  
 `
 
 export const AccordionStyle = styled.div`
@@ -218,6 +306,11 @@ margin-top: 40px;
 `
 export const StyledFAQ = styled.div`
 padding: 0 90px;
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+ padding: 0 30px;
+  }
+
 
 `
 export const StyledSection = styled(AccordionItemButton)`
@@ -230,9 +323,20 @@ background-color: transparent;
 
 `
 
-export const Text = styled.div`
+export const Text = styled.p`
 margin-top: 9px;
-text-align: center
+text-align: center;
+
+@media screen and (min-width: 768px) and (max-width: 1200px){
+ 
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+ font-size: 12px;
+  }
+
+
+
 `
 export const Newsletter = styled.div`
 border: 1px solid black;
@@ -261,10 +365,34 @@ button {
   cursor: pointer;
   
 }
+
+@media screen and (min-width: 768px) and (max-width: 1200px){
+ 
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+padding: 0 0 0 10px;
+margin: 10px 30px;
+width: 300px;
+
+input[type="email"]{
+  margin-left: 5px;
+}
+  }
+
 `
 export const Center = styled.div`
   width: 500px;
    margin: 30px auto
+
+   @media screen and (min-width: 768px) and (max-width: 1200px){
+ 
+   }
+   
+   @media screen and (min-width: 320px) and (max-width: 768px){
+    width: 100%;
+     }
+   
 `
 export const SchoolLink = styled.div`
 margin-top: 15px;
