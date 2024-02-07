@@ -64,7 +64,6 @@ export const Home = () => {
             ></img>
           </Left>
         </Flex>
-
         <Hero>
           <Right2>
             <h2>2K+</h2>
