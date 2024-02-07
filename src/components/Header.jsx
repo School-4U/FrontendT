@@ -1,5 +1,4 @@
 
-
 import { StyledHeader, Nav, StyledButtons, Button, SignB, Logo, Linkul, StyledFontAwesomeIcon } from './styles/Header.styled';
 import { Container } from './styles/Container.styled';
 import { useState } from 'react';
@@ -17,7 +16,7 @@ export default function Header() {
     <Container>
       <Nav>
       <Logo src="assets/logo.png" alt="Logo for School 4u" />
-      <StyledFontAwesomeIcon icon={faBars} onClick={() => setActive(!active)} />
+     <StyledFontAwesomeIcon icon={faBars} onClick={() => setActive(!active)} />
             <Linkul active={active}>
               <li><NavLink to="/" onClick={close}>Home</NavLink></li>
               <li><NavLink to="/about" onClick={close}>About Us</NavLink></li>
