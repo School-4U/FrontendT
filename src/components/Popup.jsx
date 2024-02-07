@@ -1,25 +1,36 @@
-import { useState } from "react";
-import { Content, PopupContainer} from "./styles/Container.styled";
 
+import { Content, PopupButton, PopupContainer, Container, Popups} from "./styles/Container.styled";
+import { SignB } from "./styles/Header.styled";
+
+import { NavLink } from "react-router-dom";
 
 export const Popup = () => {
-    const [Open, SetOpen] = useState(true)
 
-    const togglePopup = () => {
-        SetOpen(false);
-    }
   return (
-    <>
-    {Open &&(
-        <PopupContainer>
-         <Content>
-        <h4>Select Type of User</h4>
-        <button>Parent</button>
-        <button>Student</button>
-        <button onClick={togglePopup}>Close</button>
-        </Content>
-        </PopupContainer>
-    )}
+        <>
+        <Container>
+    <PopupContainer>
+      <Content>
+      <p>Select Type of User </p>
+      <Popups>
+      <NavLink to="/Parent">
+    <SignB>Parent</SignB>
+    </NavLink>
+    <NavLink to="/User">
+      <PopupButton>School</PopupButton>
+    </NavLink>
+    
+    
+      </Popups>
+      </Content>
+  
+    </PopupContainer>
+        </Container>
+
     </>
-  )
-}
+    )}
+
+
+
+
+    

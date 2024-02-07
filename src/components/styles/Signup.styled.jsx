@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Field } from 'formik'
 import { Link } from "react-router-dom";
 
+
 export const  SignUp = styled.div`
     width: 1440px;
     max-width: 100%;
@@ -19,27 +20,12 @@ flex-direction: column;
 margin: 0 auto;
 `
 
-export const Title = styled.div`
-padding: 20px 10px;
-margin-right: 64px;
-font-weight: 400;
-font-family: 'Jomhuria', serif;
-
-span{
-    color: orange;
-    font-weight: 400px;
-    font-family: 'Jomhuria' serif;
-}
-
-
-`;
-
 export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 646px;
   margin: 0 auto;
-  padding: 18px 46px 59px;
+  padding: 18px 26px 59px;
   border: 1px solid #ccc;
   border-radius: 16px;
   background: #F5F6F899;
@@ -57,15 +43,14 @@ export const FormContainer = styled.div`
     font-size: 18px;
     font-family: 'inter', sans-serif;
     font-weight: 400;
+    padding: 10px 0;
     
   }
-`;
+`
 export const Formgroup = styled.div`
 margin-bottom: 18px;
-padding-right: 46px
 
-
-`;
+`
 
 export const StyledField = styled(Field)`
 width: 100%;
@@ -117,9 +102,17 @@ export const Lines = styled.div`
 display: flex;
 align-items: center;
 
+p{
+  padding: 0 5px;
+}
+
 `
-export const Line = styled.div`
-border-top: 1px solid black;
-flex-grow: 1;
-border: none;
-`
+
+export const StyledSignInButton = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+`;
+

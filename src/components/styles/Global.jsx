@@ -9,44 +9,42 @@ const GlobalStyles = createGlobalStyle`
     
 }
 
-body{
-    font-family: 'Inter Tight', sans-serif;
+body {
+    font-family: 'inter', sans-serif;
+
 }
 
-img{
-    max-width: 100%
+img {
+    max-width: 100%;
 }
 
-ul li{
-    list-style-type: none
+ul li {
+    list-style-type: none;
 }
 
-a{
-    text-decoration: none
+a {
+    text-decoration: none;
 }
 
-span{
-    color: orange
+span {
+    color: orange;
 }
 
-h1{
-    padding-bottom: 20px;
-    font-family: 'Inter Tight', sans-serif;
+h1 {
+    padding-bottom: 1.25rem;
+    font-family: 'inter', serif;
     font-weight: 900;
-    font-size: 46px
+    font-size: 3rem;
 }
 
-h2{
+h2 {
     color: #6E7FD7;
-    font-size: 48px;
+    font-size: 2.5rem;
 }
 
 p{
     font-family: 'Inter Tight', sans-serif;
     font-weight: 400;
 }
-
-
-
 `
-export default GlobalStyles
+export default GlobalStyles;
