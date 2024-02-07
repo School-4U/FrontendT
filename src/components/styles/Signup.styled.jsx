@@ -46,11 +46,11 @@ export const FormContainer = styled.div`
     padding: 10px 0;
     
   }
-`;
+`
 export const Formgroup = styled.div`
 margin-bottom: 18px;
 
-`;
+`
 
 export const StyledField = styled(Field)`
 width: 100%;

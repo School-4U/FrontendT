@@ -10,8 +10,6 @@ export const StyledFooter = styled.footer`
   @media screen and (min-width: 768px) and (max-width: 1024px){
     grid-template-columns: 1fr;
   }
-
- 
 `
 
 export const FooterRight = styled.div`

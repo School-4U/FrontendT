@@ -2,8 +2,8 @@ import styled from "styled-components";
 import  { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export const StyledHeader = styled.header `
-    padding: 20px;
-    margin: 20px auto 0;
+    padding: 1.125rem;
+    margin: 1.125rem auto 0;
 
 `
 
@@ -36,7 +36,6 @@ li{
     z-index: 100;
 }
 
-
 `
 export const Logo = styled.img`
 width: auto;
@@ -59,10 +58,6 @@ font-weight: 400;
     gap: 20px;
 }
 
-
-
-
-
 `
 export const Button = styled.button`
     border: 1px solid black;
@@ -81,8 +76,6 @@ export const Button = styled.button`
     width: 90px;
     margin: auto;
 }
-
-
 `
 export const SignB = styled.button`
     border: none;
@@ -109,7 +102,6 @@ cursor: pointer;
 }
 
 `
-
 
 
    

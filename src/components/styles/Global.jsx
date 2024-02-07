@@ -48,6 +48,3 @@ p{
 }
 `
 export default GlobalStyles;
-
-
-

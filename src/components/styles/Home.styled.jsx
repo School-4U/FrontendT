@@ -82,6 +82,7 @@ margin-top: 90px;
 font-family: 'Inter Tight', sans-serif;
 font-weight: 700;
 
+
 @media screen and (min-width: 768px) and (max-width: 1200px){
   font-size: 26px;
 }
@@ -216,11 +217,12 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 margin-top: 15px;
+font-size: 1.1rem;
 
 input[type="email"]{
   border: none;
   outline: none;
-  flex: 1
+  flex: 1;
   margin-left: 9px;
 }
 

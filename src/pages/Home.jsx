@@ -7,24 +7,37 @@ import { Faq } from "../components/Faq";
 import { Footer } from "../components/Footer";
 import { Link } from "react-router-dom";
 
-
 export const Home = () => {
   return (
     <Container>
-      <Flex>
-        <Right>
-            <h1>Let’s Help You <span>Find The</span> <br />Right School <span>Easily</span></h1>
-            <p>School4u is a platform that helps parent match with schools that meet their<br/>criteria. Parents can input their preferences on the platform such as budget, location and many more </p>
+        <Flex>
+          <Right>
+            <h1>
+              Let’s Help You <span>Find The</span> <br />
+              Right School <span>Easily</span>
+            </h1>
+            <p>
+              School4u is a platform that helps parent match with schools that
+              meet their
+              <br />
+              criteria. Parents can input their preferences on the platform such
+              as budget, location and many more{" "}
+            </p>
             <SearchB>
-                <FaSearch /> <input type="text" placeholder="What will you like to know"></input> <button type="search">Search</button>
-     
+              <FaSearch />
+              <input
+                type="text"
+                placeholder="What will you like to know"
+              ></input>
+              <button type="search">Search</button>
             </SearchB>
             <SchoolLink>
-              
-            <Link to="/findASchool">View our Schools <FaArrowRight /></Link>
+              <Link to="/findASchool">
+                View our Schools <FaArrowRight />
+              </Link>
             </SchoolLink>
           </Right>
-
+       
         <Left>
           <img
             src="assets/lady2.jpg"
@@ -45,8 +58,9 @@ export const Home = () => {
             <h2>300+</h2>
             <p>Schools</p>
           </Left2>
+        </Flex>
         </Hero>
-      
+ 
       <WhyContainer>Why Choose Us?</WhyContainer>
       <SubHeading>Check Out Some Of What Our Users Are Saying</SubHeading>
       <Grid>
@@ -91,53 +105,60 @@ export const Home = () => {
             jobs who provide valuable information about the school
           </p>
         </Card>
-
-        </Grid2>
-  
-    <WhatContainer>
+      </Grid2
+      <WhatContainer>
         <p>What People Say About Us?</p>
     <h3>Some reviews from some of our users</h3>
-   
-   <Flex>
-  
-    <Comments>
-        <CommentImage src="assets/rename.png" alt='quote' />
-        <h5>School4u has helped me save maximum time by providing the best means of finding a school for my kid</h5>
-        
-    </Comments>
-    <hr />
-    <Comments2>
-    <CommentImage src="assets/rename.png" alt='quote' />
-    <h5>School4u is one of the most innovative and helpful website I have come across in recent days</h5>
-   
-    </Comments2>
-    <hr />
-    <Comments>
-    <CommentImage src="assets/rename.png" alt='quote' />
-    <h5>School4u has changed my life. Now I do not have to worry about finding a suitable school for my kid because school4u has got me covered </h5>
-    
-    </Comments>
-    <hr />
-    
-    </Flex>
-  
-   </WhatContainer>
-    <WhyContainer>Frequently Asked Questions</WhyContainer>
-    <SubHeading>Check Some frequently asked questions by Our Users</SubHeading>
-    <Faq />
-    <WhyContainer>Newsletter</WhyContainer>
-    <Text>Subscribe to our newsletter to get important updates on new schools that might meet your criteria. We offer the <br /> best solutions for difficulties in finding a desired school</Text>
-    <Center>
-    <Newsletter>
-                <FaMailBulk /> <input type="email" placeholder="mallymirabel@gmail.com"></input> <button type="search">Subscribe</button>
-     
-            </Newsletter>
-    </Center>
-   <Footer />
- 
-      </Container>
-    
-    );
+        <Flex>
+          <Comments>
+            <CommentImage src="assets/rename.png" alt="quote" />
+            <h5>
+              School4u has helped me save maximum time by providing the best
+              means of finding a school for my kid
+            </h5>
+          </Comments>
+          <hr />
+          <Comments2>
+            <CommentImage src="assets/rename.png" alt="quote" />
+            <h5>
+              School4u is one of the most innovative and helpful website I have
+              come across in recent days
+            </h5>
+          </Comments2>
+          <hr />
+          <Comments>
+            <CommentImage src="assets/rename.png" alt="quote" />
+            <h5>
+              School4u has changed my life. Now I do not have to worry about
+              finding a suitable school for my kid because school4u has got me
+              covered{" "}
+            </h5>
+          </Comments>
+          <hr />
+        </Flex>
+      </WhatContainer>
+
+        <WhyContainer>Frequently Asked Questions</WhyContainer>
+        <SubHeading>
+          Check Some frequently asked questions by Our Users
+        </SubHeading>
+        <Faq />
+        <WhyContainer>Newsletter</WhyContainer>
+        <Text>
+          Subscribe to our newsletter to get important updates on new schools
+          that might meet your criteria. We offer the <br /> best solutions for
+          difficulties in finding a desired school
+        </Text>
+        <Center>
+          <Newsletter>
+            <FaMailBulk />
+            <input type="email" placeholder="mallymirabel@gmail.com"></input>{" "}
+            <button type="search">Subscribe</button>
+          </Newsletter>
+        </Center>
+      <Footer />
+    </Container>
+  );
 };
     
 

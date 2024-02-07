@@ -7,7 +7,6 @@ import {
   Login,
   Verification,
   User,
-  // Signup
 } from "./pages/Main";
 import { Routes, Route } from "react-router-dom";
 import  Header from "./components/Header";

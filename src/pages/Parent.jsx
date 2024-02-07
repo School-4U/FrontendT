@@ -1,6 +1,4 @@
 
-
-
 import { Container, Formgroup, StyledField,FormContainer,FormButton,ButtonLink,StyledP, Lines, StyledSignInButton} from "../components/styles/Signup.styled";
 import { Formik, ErrorMessage } from "formik";
 import * as Yup from "yup";

@@ -1,11 +1,9 @@
 
-
 import { StyledHeader, Nav, StyledButtons, Button, SignB, Logo, Linkul, StyledFontAwesomeIcon } from './styles/Header.styled';
 import { Container } from './styles/Container.styled';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-
 
 
 export default function Header() {
@@ -35,8 +33,9 @@ export default function Header() {
               </NavLink>
 
           </StyledButtons>
+          </Linkul>
+            
            
-              </Linkul>
         
       </Nav>
 
