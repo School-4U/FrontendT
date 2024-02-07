@@ -20,7 +20,7 @@ import {
   CommentImage,
   SearchB,
   Newsletter,
-  StyledFAQ
+StyledFAQ
 } from "../components/styles/Home.styled";
 import { FaSearch, FaMailBulk, FaArrowRight } from "react-icons/fa";
 import { Faq } from "../components/Faq";
@@ -122,10 +122,10 @@ export const Home = () => {
             jobs who provide valuable information about the school
           </p>
         </Card>
-        </Grid>
+      </Grid>
       <WhatContainer>
         <p>What People Say About Us?</p>
-        <h3>Some reviews from some of our users</h3>
+    <h3>Some reviews from some of our users</h3>
 
         <Flex>
           <Comments>
@@ -181,3 +181,4 @@ export const Home = () => {
     </Container>
   );
 };
+    
