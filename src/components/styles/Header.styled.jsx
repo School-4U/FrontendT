@@ -20,7 +20,7 @@ export const Nav = styled.nav`
     justify-content: space-between;
     align-items: center;
 
-    @media screen and (min-width: 768px) and (max-width: 1200px){
+    @media screen and (max-width: 1200px){
         flex-direction: column;
     }
    
