@@ -195,13 +195,30 @@ const StyledCardType = styled.img`
 `;
 
 const StyledDivCards = styled.div`
-  margin-top: 10px;
-
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  gap: 5px;
+
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+  }
+`;
+
+const StyledDivSecuirty = styled.div`
+  margin-top: 10px;
+
+  width: 100%;
+  flex-direction: row;
+  gap: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media screen and (min-width: 768px) and (max-width: 1200px) {
   }
@@ -224,7 +241,7 @@ const Payment = () => {
         </StyledDivCheckout>
 
         <div>
-          <h3>Card Type</h3>
+          <h4>Card Type</h4>
           <StyledDivCards>
             <StyledCardType src="assets/visa.svg" alt="visa" />
             <StyledCardType src="assets/master_card.svg" alt="master_card" />
@@ -256,10 +273,15 @@ const Payment = () => {
 
         <button>Pay</button>
 
-        <div>
-          <img />
+        <StyledDivSecuirty>
+          <img
+            width={32}
+            height={32}
+            alt="security_lock"
+            src="assets/mdi_security-lock.svg"
+          />
           <h6>Payments are secured and encrypted</h6>
-        </div>
+        </StyledDivSecuirty>
       </StyledDivPayment>
     </StyledDiv>
   );
