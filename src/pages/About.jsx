@@ -1,12 +1,13 @@
 import { Container } from "../components/styles/Container.styled";
-import { ImageContainer, Content, Blue, Hero, Flex, Right, Left, Mission} from "../components/styles/About.styled";
+import { ImageContainer, Content, Blue, Hero, Flex, Right, Left, Mission, Contactleft, Flex2} from "../components/styles/About.styled";
 import { Footer } from "../components/Footer";
+import { Contact } from "./Contact";
 
 
 export const About = () => {
   return (
-    <Container>
-      <ImageContainer>
+    <Container >
+      <ImageContainer id="about">
         <Content>
           <h1><span>&quot;Who&quot; </span><Blue>Is School</Blue> <span>4u?</span></h1>
           <p>Yes!, school<span> 4U</span> is a &quot;Who,&quot; not another mindless machine floating about in the net-space </p>
@@ -41,6 +42,15 @@ export const About = () => {
 
         </Content>
       </Mission>
+      <Flex2 >
+        <Contactleft id="contact">
+        <h3>Contact Us</h3>
+        <p>Let&apos;s have a talk</p>
+        </Contactleft>
+        <>
+        <Contact/>
+        </>
+      </Flex2>
       <Footer />
     
     </Container>
