@@ -7,6 +7,7 @@ import { Popup } from "./components/Popup";
 import { FindASchool } from "./pages/FindASchool";
 import { Parent } from "./pages/Parent";
 import Payment from "./pages/Payment";
+import { Dashboard } from "./pages/Dashboard";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/FindASchool" element={<FindASchool />} />
           <Route path="/User" element={<User />} />
           <Route path="/payment" element={<Payment />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>
       </Container>
