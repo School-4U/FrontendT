@@ -28,6 +28,7 @@ import { Footer } from "../components/Footer";
 import { Link } from "react-router-dom";
 
 export const Home = () => {
+
   return (
     <Container>
       <Flex>
@@ -98,26 +99,23 @@ export const Home = () => {
         </Card>
         <Card>
           <img src="assets/Job.svg" />
-          <h4>Job Opportunities</h4>
+          <h4>Skills Acquisition</h4>
           <p>
-            With the use of this platform we are able to provide people with
-            jobs who provide valuable information about the school
+           School4U is able to provide you with the needed resources to improve your skills or learn from the scratch scratch
           </p>
         </Card>
         <Card>
           <img src="assets/Tech.svg" />
-          <h4>Job Opportunities</h4>
+          <h4>Enhanced Technology</h4>
           <p>
-            With the use of this platform we are able to provide people with
-            jobs who provide valuable information about the school
+            This platform makes it easy to find the best school for you, without spending hours on the road
           </p>
         </Card>
         <Card>
           <img src="assets/Community.svg" />
-          <h4>Job Opportunities</h4>
+          <h4>Community</h4>
           <p>
-            With the use of this platform we are able to provide people with
-            jobs who provide valuable information about the school
+            This platform gives room for enlightenment on different schools around
           </p>
         </Card>
       </Grid>
@@ -133,7 +131,7 @@ export const Home = () => {
               means of finding a school for my kid
             </h5>
           </Comments>
-          <hr />
+          
           <Comments2>
             <CommentImage src="assets/rename.png" alt="quote" />
             <h5>
@@ -141,7 +139,7 @@ export const Home = () => {
               come across in recent days
             </h5>
           </Comments2>
-          <hr />
+        
           <Comments>
             <CommentImage src="assets/rename.png" alt="quote" />
             <h5>
@@ -150,7 +148,7 @@ export const Home = () => {
               covered
             </h5>
           </Comments>
-          <hr />
+
         </Flex>
       </WhatContainer>
 

@@ -14,6 +14,7 @@ h4{
     font-family: 'Inter Tight', sans-serif;
     font-weight: 700;
     text-align: center;
+    margin-top: 9px;
   
 }
 
