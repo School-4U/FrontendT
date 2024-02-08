@@ -29,6 +29,10 @@ export const FormContainer = styled.div`
   background: #f5f6f899;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
 
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+
   h3 {
     margin: 0;
     font-size: 2rem;
@@ -46,6 +50,10 @@ export const FormContainer = styled.div`
 `;
 export const Formgroup = styled.div`
   margin-bottom: 1.1rem;
+
+  @media (max-width: 768px) {
+    margin-bottom: 0.5rem;
+  }
 `;
 
 export const StyledField = styled(Field)`
@@ -104,8 +112,8 @@ export const ButtonLink = styled(Link)`
 `;
 
 export const StyledP = styled.p`
-  font-size: 16px;
-  margin-top: 11px;
+  font-size: 1rem;
+  margin-top: 0.7rem;
   font-family: "Inter Tight", sans-serif;
   font-weight: 400;
   text-align: center;
