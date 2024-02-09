@@ -9,4 +9,7 @@ const SVGLogo = () => {
   )
 }
 
+
 export default SVGLogo;
+
+
