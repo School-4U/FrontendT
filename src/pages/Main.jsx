@@ -5,3 +5,4 @@ export * from "./Parent";
 export * from "./User";
 export * from "./Login";
 export * from "./Verification";
+export * from "./Categories";
