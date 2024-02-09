@@ -1,5 +1,6 @@
 import { Container } from "./components/styles/Container.styled";
 import GlobalStyles from "./components/styles/Global";
+
 import {
   Home,
   About,
@@ -9,11 +10,14 @@ import {
   User,
   Categories,
 } from "./pages/Main";
+
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import { Popup } from "./components/Popup";
 import { FindASchool } from "./pages/FindASchool";
 import { Parent } from "./pages/Parent";
+import Payment from "./pages/Payment";
+import { Dashboard } from "./pages/Dashboard";
 
 function App() {
   return (
@@ -32,6 +36,8 @@ function App() {
           <Route path="/FindASchool" element={<FindASchool />} />
           <Route path="/User" element={<User />} />
           <Route path="/categories" element={<Categories />} />
+          <Route path="/payment" element={<Payment />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>
       </Container>

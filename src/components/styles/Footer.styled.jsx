@@ -39,6 +39,10 @@ ul li{
     color: white
 }
 
+.link{
+  color: white;
+}
+
 @media screen and (min-width: 320px) and (max-width: 768px){
 grid-template-columns: 1fr;
   }

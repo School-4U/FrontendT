@@ -20,7 +20,7 @@ export default function Header() {
             <Linkul active={active}>
               <li><NavLink to="/" onClick={close}>Home</NavLink></li>
               <li><NavLink to="/about" onClick={close}>About Us</NavLink></li>
-              <li><NavLink to="/contact" onClick={close}>Contact Us</NavLink></li>
+              <li><NavLink to="/categories" onClick={close}>Categories</NavLink></li>
               <StyledButtons>
                 <>
            
