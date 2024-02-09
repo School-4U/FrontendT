@@ -1,14 +1,13 @@
 
-  import {  FaBookOpen, FaClock, FaHome, FaThLarge, FaUserCircle, FaCommentAlt } from "react-icons/fa";
+import {  FaBookOpen, FaClock, FaHome, FaThLarge, FaUserCircle, FaCommentAlt, FaCalendarDay } from "react-icons/fa";
 import { Container } from "../components/styles/Container.styled";
   import { Link } from "react-router-dom";
-  import { StyledDashboard, Sidebar, Main, Top, Right, Left, Home, User, Middle, Card, FirstCard, Active, Messages, StyledButtons, ImageContainer, ImageContainer2} from "../components/styles/Dashboard.styled";
-  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-  import { faStar  } from '@fortawesome/free-solid-svg-icons';
+  import { StyledDashboard, Sidebar, Main, Top, Right, Left, Home, User, Middle, Card, FirstCard, Active, Messages, StyledButtons, Calender, History} from "../components/styles/Dashboard.styled";
+
 
   
   
-  export const Dashboard = () => {
+  export const SchoolDashboard = () => {
     return (
       <div>
 
@@ -28,7 +27,11 @@ import { Container } from "../components/styles/Container.styled";
                         </>
                         <>
                         <FaBookOpen/>
-                        <h3>Courses</h3>
+                        <h3>Resources</h3>
+                        </>
+                        <>
+                        <FaCalendarDay/>
+                        <h3>Schedule</h3>
                         </>
                         <>
                         <FaClock/>
@@ -51,7 +54,7 @@ import { Container } from "../components/styles/Container.styled";
                                 </Home>
                                 <User>
                                 <FaUserCircle />
-                                <h3>Lamidi</h3>
+                                <h3>Brownhill School</h3>
                                 </User>
                             </Left>
                            
@@ -61,22 +64,22 @@ import { Container } from "../components/styles/Container.styled";
                             <Card>
                                 <FirstCard>
                                     <div>
-                                    <h3>Welcome, Lamidi</h3>
+                                    <h3>Welcome, <br/>Brownhill School</h3>
                             <p>What would you like to do today?</p>
                                     </div>
                              
                             <div>
-                            <img src="assets/profile.jpg"></img>
+                            <img src="assets/brownhill.jpg"></img>
                                 </div> 
                                 
                                 </FirstCard>      
                             </Card>
                             <Card>
-                            <h3>Messages</h3>
+                            <h3>History</h3>
                             <Messages>
                                 <div className="top">
-                                <h5>Brownhill School</h5>
-                                <p>Hi Lamidi, we&apos;d love to...</p> 
+                                <h5>Lamidi</h5>
+                                <p>Hi Brownhill School, I&apos;d love to know...</p> 
                                 </div>
                                 <StyledButtons>
                                 <Link to="">Read </Link> 
@@ -84,8 +87,8 @@ import { Container } from "../components/styles/Container.styled";
                             </Messages>
                             <Messages>
                                 <div className="top">
-                                <h5>School of Rock</h5>
-                                <p>Hi Lamidi, it&apos;s a pleasure to...</p>  
+                                <h5>Iyke</h5>
+                                <p>Hi Brownhill School, please does your...</p>  
                                 </div>
                                 <StyledButtons>
                                     
@@ -94,47 +97,39 @@ import { Container } from "../components/styles/Container.styled";
                                   
                             </Messages>
                             </Card>
-                            <div className="card">
-                            <img src="assets/map.svg"></img>
-                            </div>
                             <Card>
-                            <h3>History</h3>
-                            <ImageContainer>
-                                <div className="top">
-                                <p>Brownhill School</p>
-                            <div className="icons">
-                               
-                                <FontAwesomeIcon icon={faStar} style={{ color: 'orange' }} />
-                               <FontAwesomeIcon icon={faStar} style={{ color: 'orange' }} />
-                               <FontAwesomeIcon icon={faStar} style={{ color: 'orange' }} />
-                               <FontAwesomeIcon icon={faStar } style={{ color: 'orange' }} />
-                               <FontAwesomeIcon icon={faStar } style={{ color: 'lightgray' }} />
-                        
-                            </div>
+                                <Calender>
+                                <h3>Schedule</h3>
+                            <p>Feb, 2024</p>
+                                </Calender>
+                                <img src="assets/calender.jpg"></img>
+                           
+                            </Card>
+                            <Card>
+                            <h3 style={{ fontSize: "24px" }}>History</h3>
+                            <History>
+
+                            <div className="top">
+                                <p>Effective Child</p>
+                                <p>Development Strategies</p>
+                                <a href="" style={{ color: "#6E7FD7"}}>http://artscimedia.case.edu...</a>
                                 </div>
                             
-                            <div>
-
+                            <div className="top">
+                            <p>How to Grow</p>
+                            <p>A Successful Business</p>
+                            <a href="" style={{ color: "#6E7FD7" }}>http://artscimedia.case.edu...</a>
                             </div>
-
-                            </ImageContainer>
-                            <ImageContainer2>
-                                <div className="top">
-                                <p>School Of Rock</p>
-                            <div className="icons">
-                                <FontAwesomeIcon icon={faStar} style={{ color: 'orange' }} />
-                               <FontAwesomeIcon icon={faStar} style={{ color: 'orange' }} />
-                               <FontAwesomeIcon icon={faStar} style={{ color: 'orange' }} />
-                               <FontAwesomeIcon icon={faStar } style={{ color: 'orange' }} />
-                               <FontAwesomeIcon icon={faStar } style={{ color: 'orange' }} />
+                            </History>
+                               
+                            
+                             
                         
-                            </div>
-                                </div>
                             
                             <div>
                                 
                             </div>
-                            </ImageContainer2>
+                            
                         </Card>
                     </Middle>
                     </Main>

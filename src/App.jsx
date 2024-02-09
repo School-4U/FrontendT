@@ -18,12 +18,20 @@ import { FindASchool } from "./pages/FindASchool";
 import { Parent } from "./pages/Parent";
 import Payment from "./pages/Payment";
 import { Dashboard } from "./pages/Dashboard";
+import { SchoolDashboard } from "./pages/SchoolDashboard";
+import { useLocation } from "react-router-dom";
 
 function App() {
+
+  const location = useLocation();
+  const isDashboardPage = location.pathname === "/dashboard";
+  const isSchoolDashboardPage = location.pathname === "/SchoolDashboard";
+  // const SchoolDashboardPage = location.pathname === "/schoolDashboard";
   return (
     <>
       <GlobalStyles />
-      <Header />
+      {isDashboardPage || isSchoolDashboardPage ? null : <Header />}
+      {/* {SchoolDashboardPage ? null : <Header />} */}
       <Container>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -38,6 +46,7 @@ function App() {
           <Route path="/categories" element={<Categories />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/Schooldashboard" element={<SchoolDashboard />} />
           <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>
       </Container>
