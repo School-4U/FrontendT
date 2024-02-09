@@ -50,6 +50,10 @@ export const FormContainer = styled.div`
 `;
 export const Formgroup = styled.div`
   margin-bottom: 1.1rem;
+
+  @media (max-width: 768px) {
+    margin-bottom: 0.5rem;
+  }
 `;
 
 export const StyledField = styled(Field)`

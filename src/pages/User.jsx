@@ -122,25 +122,25 @@ export const User = () => {
               <ButtonLink to="/login">Log In</ButtonLink>
             </StyledP>
             <Lines>
-            <svg
-              width="252"
-              height="1"
-              viewBox="0 0 252 1"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <line y1="0.5" x2="252" y2="0.5" stroke="#2F2F2F" />
-            </svg>
+              <svg
+                width="252"
+                height="1"
+                viewBox="0 0 252 1"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line y1="0.5" x2="252" y2="0.5" stroke="#2F2F2F" />
+              </svg>
               <p> OR </p>
               <svg
-              width="252"
-              height="1"
-              viewBox="0 0 252 1"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <line y1="0.5" x2="252" y2="0.5" stroke="#2F2F2F" />
-            </svg>
+                width="252"
+                height="1"
+                viewBox="0 0 252 1"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line y1="0.5" x2="252" y2="0.5" stroke="#2F2F2F" />
+              </svg>
             </Lines>
 
             <StyledSignInButton id="SignInButton">

@@ -1,4 +1,3 @@
-
 import GlobalStyles from "../components/styles/Global";
 import LoginForm from "./LoginForm";
 import {
@@ -7,7 +6,6 @@ import {
   LoginWelcome,
   LoginRight,
 } from "../components/styles/Login.styled";
-import SVGLogo from "../../public/assets/SVGLogo";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 
 const ClientId =
@@ -20,7 +18,6 @@ export const Login = () => {
         <GlobalStyles />
         <LoginLeft>
           <div>
-            <SVGLogo />
             <LoginWelcome>Welcome Back!</LoginWelcome>
           </div>
         </LoginLeft>

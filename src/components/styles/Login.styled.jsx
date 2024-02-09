@@ -15,12 +15,12 @@ export const ContainerDiv = styled.div`
     url("../../../assets/login/login-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center; 
+  background-position: center;
 
-   @media (max-width: 768px) {
+  @media (max-width: 768px) {
     justify-content: center;
     align-items: center;
-    padding: 1rem;        
+    padding: 1rem;
     background: #fff;
     background-image: none;
   }
@@ -38,41 +38,26 @@ export const LoginLeft = styled.div`
     display: none;
   }
 
-
   & div {
     display: flex;
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    gap: 3rem;
-    background-color: rgba(255, 255, 255, 0.2);
-    /* background-image: url("../../../../assets/login/Highlight.png"); */
-    /* background-image: rgba(255, 255, 255, 0.2); */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     width: 100%;
-    height: 10rem;
     padding: 0.5rem;
-
-    & h1 {
-      margin-inline: 0;
-      margin-bottom: 1rem;
-      /* text-shadow: 0 6px 6px 10px; */
-    }
   }
 `;
 
-export const LoginWelcome = styled.h4`
+export const LoginWelcome = styled.h2`
   color: #000;
+  background-color: rgba(255, 255, 255, 0.3);
   text-align: center;
   font-family: "Inter", sans-serif;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-top: -8rem;
-  /* margin-inline: 10%; */
+  padding: 1rem;
 
   @media (max-width: 768px) {
     display: none;
