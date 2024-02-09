@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Select from "react-select";
 import { Container } from "../components/styles/Container.styled";
 import { Footer } from "../components/Footer";
+import { Link } from "react-router-dom";
 
 const Top = styled.div`
   width: 100%;
@@ -54,6 +55,22 @@ const SelectContainer = styled.div`
     padding: 2rem;
     
 `
+export const Button = styled.button`
+border: none;
+border-radius: 10px;
+cursor: pointer;
+background:  #6E7FD7;
+padding: 8px 20px;
+margin: 10px 600px;
+color: white;
+
+
+&:hover{
+    background: white;
+    color:  #6E7FD7;
+    border: 1px solid #6E7FD7;
+}
+`
 
 export const Categories = () => {
   const institutions = [
@@ -105,10 +122,12 @@ export const Categories = () => {
             { value: "0-100000", label: "Below 100,000" },
             { value: "100000-300000", label: "100,000 - 300,000" },
             { value: "300000-500000", label: "300,000 - 500,000" },
-            { value: "500000-1000000", label: "500,000 - 1,000,000" },
-            { value: "1000000-2000000", label: "1,000,000 - 2,000,000" },
-            { value: "2000000-5000000", label: "2,000,000 - 5,000,000" },
-            { value: "5000000-10000000", label: "5,000,000 - 10,000,000" },
+            { value: "500000-1000000", label: "500,000 - 700,000" },
+            { value: "1000000-2000000", label: "700,000 - 900,000" },
+            { value: "2000000-5000000", label: "1.100,000 - 1,300,000" },
+            { value: "5000000-10000000", label: "1,300,000 - 1,500,000" },
+            { value: "5000000-10000000", label: "1,500,000 - 1,700,000" },
+            { value: "5000000-10000000", label: "1,700,000 - 2,000,000" },
         ];
 
 
@@ -158,6 +177,8 @@ export const Categories = () => {
       <p>Choose Preferred Budget</p>
       <Select options={budget} styles={customStyles} />
       </SelectContainer>
+      <Link to="/findASchool"> <Button type="submit" Link to="">Proceed to Find A School</Button></Link>
+     
       <Footer />
     </Container>
   );

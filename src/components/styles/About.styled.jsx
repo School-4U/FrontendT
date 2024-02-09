@@ -308,9 +308,8 @@ margin: 10px 100px;
 
 &:hover{
     background: white;
-
-
-color:  #6E7FD7;
+    color:  #6E7FD7;
+    border: 1px solid #6E7FD7;
 }
 
 `
