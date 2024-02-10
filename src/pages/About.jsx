@@ -77,7 +77,7 @@ export const About = () => {
               <a href="">
               <FaLinkedin/>
                 </a>
-                <a href="">
+                <a href="https://x.com/iyke4web">
                 <FaTwitterSquare/>
                 </a>
                
