@@ -49,7 +49,6 @@ export const Footer = () => {
 
           <ul>
             <li>
-              {" "}
               <h4>Community</h4>
             </li>
             <li>Refer a friend</li>

@@ -5,12 +5,14 @@ import { Container } from "../components/styles/Container.styled";
   import { StyledDashboard, Sidebar, Main, Top, Right, Left, Home, User, Middle, Card, FirstCard, Active, Messages, StyledButtons, ImageContainer, ImageContainer2} from "../components/styles/Dashboard.styled";
   import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
   import { faStar  } from '@fortawesome/free-solid-svg-icons';
+  import { Loader } from "../components/Loader";
 
   
   
   export const Dashboard = () => {
     return (
       <div>
+        <Loader/>
 
             <Container>
 
