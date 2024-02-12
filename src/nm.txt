@@ -1,0 +1,16 @@
+Api documentation 
+
+---url for login 
+
+names of form field for login email, password1
+
+url for signup for  school
+
+names of form field for school signup
+1. email, password, name, address
+
+url for signup for parent
+names of form field for parent signup
+1. email, password, firstName, lastName
+https://backend-production-b20a.up.railway.app/users/signup/parent
+https://backend-production-b20a.up.railway.app/users/login
