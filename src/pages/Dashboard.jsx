@@ -19,7 +19,7 @@ import { Container } from "../components/styles/Container.styled";
                     <Sidebar>
                         <Active>
                         <FaThLarge />
-                        <h3>Dashboard </h3>
+                        <h3>Dashboard</h3>
                         </Active>
 
                         <>
