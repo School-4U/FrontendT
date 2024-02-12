@@ -1,4 +1,3 @@
-
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import GlobalStyles from "../components/styles/Global";
@@ -11,7 +10,7 @@ const Container = styled.div`
   max-width: 600px;
   margin: 0 auto;
   padding: 10rem 2rem;
-  background-color: #F5F6F8;
+  background-color: #f5f6f8;
   border-radius: 10px;
   border: 1px solid #333;
 `;
@@ -71,7 +70,6 @@ const AfterDigits = styled.div`
     border-radius: 25px;
     cursor: pointer;
   }
-
 `;
 
 const EmailVerification = () => {
@@ -93,20 +91,20 @@ const EmailVerification = () => {
 
   const handleKeyDown = (e, index) => {
     const { value } = e.target;
-  
+
     // Limit input to a single numeric character
     if (value.length > 1 || Number.isNaN(value)) {
       e.preventDefault(); // Prevent invalid input
       return;
     }
-  
+
     // Update state with the valid digit
     setVerificationCode((prevCode) => {
       const newCode = [...prevCode];
       newCode[index] = value;
       return newCode;
     });
-  
+
     // Move focus to the next empty input on digit entry
     if (value.length === 1 && index < 5) {
       const nextInput = document.getElementById(`input-${index + 1}`);
@@ -114,7 +112,7 @@ const EmailVerification = () => {
         nextInput.focus();
       }
     }
-  
+
     // Move focus to the previous input on backspace
     if (value.length === 0 && index > 0) {
       const prevInput = document.getElementById(`input-${index - 1}`);
@@ -122,30 +120,30 @@ const EmailVerification = () => {
     }
   };
 
-
   const navigate = useNavigate();
-    const handleSubmit = async (e) => {
-      e.preventDefault();
-    
-      try {
-        const code = verificationCode.join("");
-        const response = await axios.post("https://backend-production-b20a.up.railway.app/users/signup/parent/otpDetails", {
-          code,
-         
-        });
-  
-        if (response.status === 200) {
-          // Verification successful, you can handle the success logic here
-          setVerificationResult("your verification is successful");
-        } else {
-          setVerificationResult("Verification failed");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const otp = verificationCode.join("");
+      const response = await axios.post(
+        "https://backend-production-b20a.up.railway.app/users/parentSignup",
+        {
+          otp,
         }
-        navigate('/login');
-      } catch (error) {
-        console.log(`"Error occurred during verification:", ${error.message}`);
+      );
+
+      if (response.status === 200) {
+        // Verification successful, you can handle the success logic here
+        setVerificationResult("your verification is successful");
+      } else {
+        setVerificationResult("Verification failed");
       }
-    };
-  
+      navigate("/login");
+    } catch (error) {
+      console.log(`"Error occurred during verification:", ${error.message}`);
+    }
+  };
 
   return (
     <Container>
@@ -154,7 +152,8 @@ const EmailVerification = () => {
         <h2>Email Verification</h2>
         <h3>Enter Code</h3>
         <p>
-          Enter 6-digit code sent to <span style={{ color: "#fa9907"}}>{"someone@example.com"}</span>
+          Enter 6-digit code sent to{" "}
+          <span style={{ color: "#fa9907" }}>{"someone@example.com"}</span>
         </p>
       </Head>
       <VerificationDigits>
