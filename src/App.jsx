@@ -20,9 +20,9 @@ import Payment from "./pages/Payment";
 import { Dashboard } from "./pages/Dashboard";
 import { SchoolDashboard } from "./pages/SchoolDashboard";
 import { useLocation } from "react-router-dom";
+import ForgotPassword from "./pages/ForgotPassword";
 
 function App() {
-
   const location = useLocation();
   const isDashboardPage = location.pathname === "/dashboard";
   const isSchoolDashboardPage = location.pathname === "/SchoolDashboard";
@@ -47,6 +47,7 @@ function App() {
           <Route path="/payment" element={<Payment />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/Schooldashboard" element={<SchoolDashboard />} />
+          <Route path="/forgot_password" element={<ForgotPassword />} />
           <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>
       </Container>
