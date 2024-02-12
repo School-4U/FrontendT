@@ -2,9 +2,8 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import GlobalStyles from "../components/styles/Global";
-import axios from "axios";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 
 const Container = styled.div`
   width: 100%;
@@ -121,31 +120,6 @@ const EmailVerification = () => {
       prevInput.focus();
     }
   };
-
-
-  const navigate = useNavigate();
-    const handleSubmit = async (e) => {
-      e.preventDefault();
-    
-      try {
-        const code = verificationCode.join("");
-        const response = await axios.post("https://backend-production-b20a.up.railway.app/users/signup/parent/otpDetails", {
-          code,
-         
-        });
-  
-        if (response.status === 200) {
-          // Verification successful, you can handle the success logic here
-          setVerificationResult("your verification is successful");
-        } else {
-          setVerificationResult("Verification failed");
-        }
-        navigate('/login');
-      } catch (error) {
-        console.log(`"Error occurred during verification:", ${error.message}`);
-      }
-    };
-  
 
   return (
     <Container>
