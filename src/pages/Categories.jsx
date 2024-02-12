@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Top = styled.div`
   width: 100%;
   height: 450px;
-  background-image: url('../../public/assets/categories-top-image.png');
+  background-image: url('../../assets/categories-top-image.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -21,7 +21,7 @@ const Top = styled.div`
   & div {
     text-align: center;
     color: #fff;
-    background-image: url('../../public/assets/categories-top-cover.png');
+    background-image: url('../../assets/categories-top-cover.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
