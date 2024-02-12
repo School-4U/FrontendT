@@ -13,6 +13,11 @@ import { Formik, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { GoogleLogin } from "@react-oauth/google";
 import { GoogleOAuthProvider } from "@react-oauth/google";
+import { useState } from "react";
+import axios from "axios";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from "react-router-dom";
 
 //   Form to be filled by School Owners
 
@@ -55,6 +60,42 @@ export const User = () => {
     console.log("Form submitted with values:", values);
     setSubmitting(false);
   };
+  const navigate = useNavigate();
+  
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [password, setPassword] = useState('');
+  const [address, setAddress] = useState('');
+ 
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!email || !name || !address || !password) {
+      toast.error('Please fill out all fields');
+      return;
+    }
+
+    try {
+      const response = await axios.post("https://backend-production-b20a.up.railway.app/users/sendotpForSch", {
+        email,
+        name,
+        address,
+        password,
+      });
+
+      
+
+      console.log(response.data);
+      toast.success('Signup successful');
+
+      // Navigate to the dashboard upon successful form submission
+      navigate('/Verification');
+    } catch (error) {
+      // setError(error.message);
+      console.error('Signup failed:', error);
+    }
+  };
+
 
   return (
     <GoogleOAuthProvider clientId={clientId}>
@@ -73,6 +114,8 @@ export const User = () => {
                 id="schoolName"
                 name="schoolName"
                 placeholder="School Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
               />
               <ErrorMessage name="schoolName" component="div" />
             </Formgroup>
@@ -83,6 +126,8 @@ export const User = () => {
                 id="email"
                 name="email"
                 placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <ErrorMessage name="email" component="div" />
             </Formgroup>
@@ -92,6 +137,8 @@ export const User = () => {
                 id="location"
                 name="location"
                 placeholder="Location"
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
               />
               <ErrorMessage name="location" component="div" />
             </Formgroup>
@@ -102,6 +149,8 @@ export const User = () => {
                 id="password"
                 name="password"
                 placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
               <ErrorMessage name="password" component="div" />
             </Formgroup>
@@ -116,7 +165,8 @@ export const User = () => {
               <ErrorMessage name="confirmPassword" component="div" />
             </Formgroup>
 
-            <FormButton type="submit">Sign Up</FormButton>
+            <FormButton type="submit" onClick={handleSubmit}>Sign Up</FormButton>
+            <ToastContainer />
             <StyledP>
               Already have an account?{" "}
               <ButtonLink to="/login">Log In</ButtonLink>
