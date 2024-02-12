@@ -39,7 +39,7 @@ li{
 
 @media screen and (min-width: 768px) and  (max-width: 1200px){
     display: ${(props) => (props.active ? "block" : "none")};
-    background: orange;
+    background: #ebc888;
     margin-top: 30px;
     z-index: 100;
    
