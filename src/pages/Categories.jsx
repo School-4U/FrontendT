@@ -48,11 +48,23 @@ const Top = styled.div`
 
 const SelectContainer = styled.div`
     width: 100%;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 2rem;
+    margin: auto;
+
+    @media screen and (min-width: 768px) and (max-width: 1200px){
+     padding: 1rem;
+    
+    }
+    
+    @media screen and (min-width: 320px) and (max-width: 768px){
+     max-width: 55%
+
+    }  
     
 `
 export const Button = styled.button`
@@ -69,6 +81,15 @@ color: white;
     background: white;
     color:  #6E7FD7;
     border: 1px solid #6E7FD7;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px){
+  margin: 10px 350px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+margin: 10px 100px;
+
 }
 `
 

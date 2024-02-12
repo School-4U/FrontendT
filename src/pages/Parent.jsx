@@ -12,6 +12,12 @@ import {
 import { Formik, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
+import { useState } from "react";
+import axios from "axios";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from "react-router-dom";
+
 
 const clientId =
   "193762191190-fgbm80sm4g6mam8pnjgs5fjvo6klcbik.apps.googleusercontent.com";
@@ -46,12 +52,50 @@ export const Parent = () => {
       .oneOf([Yup.ref("password")], "Passwords must match")
       .required("Required"),
   });
+  
 
   const onSubmit = (values, { setSubmitting }) => {
     // You can handle form submission logic here
     console.log("Form submitted with values:", values);
     setSubmitting(false);
   };
+
+  const navigate = useNavigate();
+  
+  const [email, setEmail] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [password, setPassword] = useState('');
+  const [firstName, setFirstName] = useState('');
+ 
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!email || !firstName || !lastName || !password) {
+      toast.error('Please fill out all fields');
+      return;
+    }
+
+    try {
+      const response = await axios.post("https://backend-production-b20a.up.railway.app/users/sendotp", {
+        email,
+        firstName,
+        lastName,
+        password,
+      });
+
+      
+
+      console.log(response.data);
+      toast.success('Signup successful');
+
+      // Navigate to the dashboard upon successful form submission
+      navigate('/Verification');
+    } catch (error) {
+      // setError(error.message);
+      console.error('Signup failed:', error);
+    }
+  };
+
 
   return (
     <GoogleOAuthProvider clientId={clientId}>
@@ -70,6 +114,8 @@ export const Parent = () => {
                 id="firstName"
                 name="firstName"
                 placeholder="First Name"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
               />
               <ErrorMessage name="firstName" component="div" />
             </Formgroup>
@@ -80,6 +126,9 @@ export const Parent = () => {
                 id="lastName"
                 name="lastName"
                 placeholder="Last Name"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+                
               />
               <ErrorMessage name="lastName" component="div" />
             </Formgroup>
@@ -90,6 +139,9 @@ export const Parent = () => {
                 id="email"
                 name="email"
                 placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                
               />
               <ErrorMessage name="email" component="div" />
             </Formgroup>
@@ -100,6 +152,9 @@ export const Parent = () => {
                 id="password"
                 name="password"
                 placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                
               />
               <ErrorMessage name="password" component="div" />
             </Formgroup>
@@ -110,11 +165,15 @@ export const Parent = () => {
                 id="confirmPassword"
                 name="confirmPassword"
                 placeholder="Confirm Password"
+                // value={ password }
+
               />
+              {/* {error && <p className="text-red-500 text-xs italic">{error}</p> */}
               <ErrorMessage name="confirmPassword" component="div" />
             </Formgroup>
 
-            <FormButton type="submit">Sign Up</FormButton>
+            <FormButton type="submit" onClick={handleSubmit}>Sign Up</FormButton>
+            <ToastContainer />
             <StyledP>
               Already have an account?{" "}
               <ButtonLink to="/login">Log In</ButtonLink>
@@ -153,6 +212,7 @@ export const Parent = () => {
                 isSignedIn={true}
               />
             </StyledSignInButton>
+  
           </FormContainer>
         </Formik>
       </Container>
