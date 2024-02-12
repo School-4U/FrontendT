@@ -89,7 +89,7 @@ export const Parent = () => {
       toast.success('Signup successful');
 
       // Navigate to the dashboard upon successful form submission
-      navigate('/dashboard');
+      navigate('/Verification');
     } catch (error) {
       // setError(error.message);
       console.error('Signup failed:', error);
