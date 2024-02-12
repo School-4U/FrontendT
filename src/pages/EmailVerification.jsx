@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import GlobalStyles from "../components/styles/Global";
-import axios from "axios";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 
 const Container = styled.div`
   width: 100%;
@@ -144,6 +143,7 @@ const EmailVerification = () => {
       console.log(`"Error occurred during verification:", ${error.message}`);
     }
   };
+
 
   return (
     <Container>
