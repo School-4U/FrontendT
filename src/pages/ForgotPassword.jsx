@@ -9,11 +9,8 @@ const StyledDiv = styled.div`
   align-items: center;
   justify-content: space-around;
 
-  margin-top: 100px;
-  margin-bottom: 150px;
-
   @media screen and (min-width: 768px) and (max-width: 1200px) {
-    gap: 100px;
+    gap: 10px;
     margin-top: 50px;
     flex-direction: column;
   }
@@ -24,20 +21,26 @@ const StyledDiv = styled.div`
   }
 
   @media screen and (max-width: 319px) {
+    width: 310px;
     padding: 10px;
     flex-direction: column;
   }
 `;
 
 const StyledDivLogo = styled.div`
-  max-width: 600px;
+  width: 100%;
   padding: 20px;
   margin-left: 70px;
+  max-width: 600px;
 
-  height: auto;
+  height: 350px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 20px;
+
+  align-text: center;
 
   @media screen and (min-width: 768px) and (max-width: 1200px) {
     margin-left: 10px;
@@ -48,7 +51,7 @@ const StyledDivLogo = styled.div`
   }
 `;
 
-const StyledDivPayment = styled.div`
+const StyledDivForgotPassword = styled.div`
   min-width: 550px;
   max-width: 650px;
   padding: 40px;
@@ -56,7 +59,8 @@ const StyledDivPayment = styled.div`
   border-radius: 16px;
   background-color: rgba(245, 246, 248, 0.6);
 
-  height: auto;
+  // height: auto;
+  min-height: 800px;
   display: flex;
   align-items: start;
   flex-direction: column;
@@ -66,6 +70,7 @@ const StyledDivPayment = styled.div`
     font-size: 32px;
     font-weigh: bold;
     line-height: 32px;
+    margin-bottom: 12px;
   }
 
   h4 {
@@ -80,17 +85,23 @@ const StyledDivPayment = styled.div`
   }
 
   h6 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: normal;
   }
 
   button {
     margin-top: 20px;
     margin-bottom: 10px;
+    width: 350px;
 
-    width: 100%;
-    font-size: 32px;
-    font-weight: bold;
+    display: flex;
+    align-self: center;
+    text-align: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 24px;
+    font-weight: semi-bold;
     border-radius: 25px;
     border: 1px solid rgba(110, 127, 215, 1);
     padding-top: 10px;
@@ -102,7 +113,7 @@ const StyledDivPayment = styled.div`
     margin-top: 5px;
     margin-bottom: 15px;
 
-    padding-left: 10px;
+    padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
 
@@ -115,33 +126,31 @@ const StyledDivPayment = styled.div`
   @media screen and (min-width: 768px) and (max-width: 1200px) {
     margin-right: 20px;
     flex-direction: column;
-    min-width: 450px;
-    max-width: 550px;
+    min-width: 550px;
+    max-width: 650px;
   }
 
   @media screen and (min-width: 320px) and (max-width: 768px) {
     margin-right: 0px;
     min-width: 300px;
     max-width: 450px;
-
     padding: 30px;
   }
 
   @media screen and (max-width: 319px) {
-    width: 300px;
+    min-width: 300px;
     padding: 10px;
-    background-color: red;
     padding: 10px;
   }
 `;
 
-const StyledDivCheckout = styled.div`
+const StyledDivText = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
 `;
 
-const StyledDivCardInput = styled.div`
+const StyledDivInput = styled.div`
   width: 100%;
   display: flex;
   align-items: start;
@@ -151,39 +160,7 @@ const StyledDivCardInput = styled.div`
   margin-top: 10px;
 `;
 
-const StyledDivGrouped = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-
-  width: 100%;
-  gap: 28px;
-
-  @media screen and (min-width: 320px) and (max-width: 768px) {
-    flex-direction: column;
-  }
-`;
-
-const StyledCardType = styled.img`
-  width: 163px;
-  height: 80px;
-
-  @media screen and (min-width: 320px) and (max-width: 768px) {
-    height: 1.5rem;
-  }
-`;
-
-const StyledDivCards = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 5px;
-`;
-
-const StyledDivSecuirty = styled.div`
+const StyledDivLogin = styled.div`
   margin-top: 10px;
 
   width: 100%;
@@ -195,64 +172,40 @@ const StyledDivSecuirty = styled.div`
   justify-content: center;
 `;
 
-const Payment = () => {
+const ForgotPassword = () => {
   return (
     <StyledDiv>
       <StyledDivLogo>
         <Logo src="assets/logo.png" alt="Logo for School 4u" />
+        <h5>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo
+        </h5>
       </StyledDivLogo>
 
-      <StyledDivPayment>
-        <StyledDivCheckout>
-          <h3>Checkout</h3>
-          <h5>Complete your payment by providing your payment details</h5>
-        </StyledDivCheckout>
+      <StyledDivForgotPassword>
+        <StyledDivText>
+          <h3>Forgot Password?</h3>
+          <h5>Enter your account email</h5>
+          <h5>we’ll send you a reset link right away</h5>
+        </StyledDivText>
 
-        <div>
-          <h4>Card Type</h4>
-          <StyledDivCards>
-            <StyledCardType src="assets/visa.svg" alt="visa" />
-            <StyledCardType src="assets/master_card.svg" alt="master_card" />
-            <StyledCardType src="assets/verve.svg" alt="verve" />
-          </StyledDivCards>
-        </div>
+        <StyledDivInput>
+          <input type="text" placeholder="Email" />
+        </StyledDivInput>
 
-        <StyledDivCardInput>
-          <h4>Cardholder Name</h4>
-          <input type="text" />
-        </StyledDivCardInput>
+        <button>Get Link</button>
 
-        <StyledDivCardInput>
-          <h4>Cardholder Number</h4>
-          <input type="number" />
-        </StyledDivCardInput>
-
-        <StyledDivGrouped>
-          <StyledDivCardInput>
-            <h4>Expiration Date</h4>
-            <input type="date" />
-          </StyledDivCardInput>
-
-          <StyledDivCardInput>
-            <h4>CVV</h4>
-            <input type="number" />
-          </StyledDivCardInput>
-        </StyledDivGrouped>
-
-        <button>Pay</button>
-
-        <StyledDivSecuirty>
-          <img
-            width={32}
-            height={32}
-            alt="security_lock"
-            src="assets/mdi_security-lock.svg"
-          />
-          <h6>Payments are secured and encrypted</h6>
-        </StyledDivSecuirty>
-      </StyledDivPayment>
+        <StyledDivLogin>
+          <h6>
+            Return to <span>Login</span>
+          </h6>
+        </StyledDivLogin>
+      </StyledDivForgotPassword>
     </StyledDiv>
   );
 };
 
-export default Payment;
+export default ForgotPassword;

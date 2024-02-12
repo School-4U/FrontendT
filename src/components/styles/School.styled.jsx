@@ -44,7 +44,8 @@ export const Top = styled.div`
 
 export const Middle = styled.div`
 h3{
-    padding: 20px 90px;
+  text-align: center;
+  margin: 2rem 1rem;
 }
 
 `

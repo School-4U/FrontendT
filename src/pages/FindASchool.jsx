@@ -20,7 +20,7 @@ export const FindASchool = () => {
           </div>
         </Top>
         <Middle>
-        <h3>Here are schools that might meets your <span> desired criteria from <br/></span>your <span>choices selected</span></h3>
+        <h3>Here are schools that might meets your <span> desired criteria from </span>your <span>choices selected</span></h3>
         </Middle>
        <ListOfSchools data={data} />
       

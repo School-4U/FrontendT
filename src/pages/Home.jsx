@@ -39,11 +39,8 @@ export const Home = () => {
           </h1>
           <p>
             School4u is a platform that helps parent match with schools that
-            meet their
-            <br />
-            criteria. Parents can input their preferences on the platform such
-            as budget, <br />
-            location and many more
+            meet their criteria. Parents can input their preferences on the platform such
+            as budget, location and many more
           </p>
           <SearchB>
             <FaSearch />
