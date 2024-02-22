@@ -1,14 +1,18 @@
 
   import {  FaBookOpen, FaClock, FaHome, FaThLarge, FaUserCircle, FaCommentAlt } from "react-icons/fa";
 import { Container } from "../components/styles/Container.styled";
-  import { Link } from "react-router-dom";
+  import { Link, Route } from "react-router-dom";
   import { StyledDashboard, Sidebar, Main, Top, Right, Left, Home, User, Middle, Card, FirstCard, Active, Messages, StyledButtons, ImageContainer, ImageContainer2} from "../components/styles/Dashboard.styled";
   import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
   import { faStar  } from '@fortawesome/free-solid-svg-icons';
-  
+  import { useLocation } from "react-router-dom";
 
 
   export const Dashboard = () => {
+    //let data2 = route.params.state
+    const location = useLocation();
+    const data = location.state;
+    
     return (
       <div>
     
@@ -51,7 +55,7 @@ import { Container } from "../components/styles/Container.styled";
                                 </Home>
                                 <User>
                                 <FaUserCircle />
-                                <h3>Lamidi</h3>
+                                <h3>{data.firstName}</h3>
                                 </User>
                             </Left>
                            
@@ -61,12 +65,14 @@ import { Container } from "../components/styles/Container.styled";
                             <Card>
                                 <FirstCard>
                                     <div>
-                                    <h3>Welcome, Lamidi</h3>
+                                    <h3>Welcome, {data.firstName}</h3>
+                                    
                             <p>What would you like to do today?</p>
                                     </div>
                              
                             <div>
-                            <img src="assets/profile.jpg"></img>
+                                {data.profilePic?
+                            <img src="assets/profile.jpg" width="500px"/>: <FaUserCircle />}
                                 </div> 
                                 
                                 </FirstCard>      
@@ -76,7 +82,7 @@ import { Container } from "../components/styles/Container.styled";
                             <Messages>
                                 <div className="top">
                                 <h5>Brownhill School</h5>
-                                <p>Hi Lamidi, we&apos;d love to...</p> 
+                                <p>Hi {data.firstName}, we&apos;d love to...</p> 
                                 </div>
                                 <StyledButtons>
                                 <Link to="">Read </Link> 
@@ -85,7 +91,7 @@ import { Container } from "../components/styles/Container.styled";
                             <Messages>
                                 <div className="top">
                                 <h5>School of Rock</h5>
-                                <p>Hi Lamidi, it&apos;s a pleasure to...</p>  
+                                <p>Hi {data.firstName}, it&apos;s a pleasure to...</p>  
                                 </div>
                                 <StyledButtons>
                                     
