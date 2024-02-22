@@ -110,9 +110,6 @@ export const Parentprofile = () => {
     {value:'italian', label: 'Italian'},
   ];
 
-
-  });
-
   const validationSchema = Yup.object({
     address: Yup.string().required("Address is required"),
     location: Yup.string().required("Location is required"),
