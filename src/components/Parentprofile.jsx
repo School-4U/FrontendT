@@ -4,6 +4,8 @@ import {Field, Form, Formik, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useState, useEffect } from "react";
 import Select from 'react-select';
+import axios from "axios";
+
 
 export const StyledSchoolProfile = styled.div`
   background: white;
@@ -80,6 +82,8 @@ export const Top = styled.div``;
 export const Bottom = styled.div``;
 
 export const Parentprofile = () => {
+  const [image, setImage] = useState("null")
+
   const [userData, setUserData] = useState({
     address: "",
     location: "",
@@ -156,8 +160,30 @@ export const Parentprofile = () => {
       console.error("Error submitting form:", error);
     }
   };
+
+  // function handleUpload(){
+  //   if (!image){
+  //     console.log("error inputing file");
+  //     return;
+  //   }
+  //   const FormData = new FormData()
+  //   FormData.append("image", image)
+
+  //   axios.post("", formData).then((res) => {
+  //     console.log(res.data);
+  //   })
+  //   .catch((error) => {
+  //     console.log(error);
+  //   });
   return (
     <StyledSchoolProfile>
+        <>
+        <img src="assets/profile.jpg" width="200px"/>
+      <input type="file" name="file" onChange={(e) => {setImage(e.target.files[0])}}/>
+      <h3>Ramadan</h3>
+      <button>Edit Image</button>
+        </>
+      
       <Formik
         initialValues={userData}
         validationSchema={validationSchema}
@@ -242,8 +268,3 @@ export const Parentprofile = () => {
     </StyledSchoolProfile>
   );
 };
-
-
-
-
-
