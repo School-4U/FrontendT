@@ -5,6 +5,8 @@ import * as Yup from "yup";
 import { useState, useEffect } from "react";
 import Select from 'react-select';
 
+
+
 export const StyledSchoolProfile = styled.div`
   background: white;
   display: flex;
@@ -103,6 +105,9 @@ export const Parentprofile = () => {
     { value:'punjabi', label: 'Punjabi'},
     {value:'italian', label: 'Italian'},
   ];
+
+
+  });
 
   const validationSchema = Yup.object({
     address: Yup.string().required("Address is required"),
