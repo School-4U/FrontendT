@@ -20,7 +20,7 @@
    
     navigate("/");
   };
-    
+
     return (
       <div>
             <Container>
@@ -69,6 +69,7 @@
                                 <Link to="/Parentprofile">
                                 <FaUserCircle />
                                 <h3>{data.firstName}</h3>
+
                                 </Link>
                                 </User>
 
