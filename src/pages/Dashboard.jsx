@@ -6,17 +6,21 @@
   import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
   import { faStar  } from '@fortawesome/free-solid-svg-icons';
   import { useNavigate } from "react-router-dom";
-
-
+  import { useLocation } from "react-router-dom";
 
   export const Dashboard = () => {
-    const navigate = useNavigate();
+    //let data2 = route.params.state
+    const location = useLocation();
+    const data = location.state;
+    
+   const navigate = useNavigate();
 
     
-  const handleLogout = () => {
+   const handleLogout = () => {
    
     navigate("/");
   };
+
     return (
       <div>
             <Container>
@@ -64,7 +68,8 @@
                                 <User>
                                 <Link to="/Parentprofile">
                                 <FaUserCircle />
-                                <h3>Lamidi</h3>
+                                <h3>{data.firstName}</h3>
+
                                 </Link>
                                 </User>
 
@@ -85,12 +90,14 @@
                             <Card>
                                 <FirstCard>
                                     <div>
-                                    <h3>Welcome, Lamidi</h3>
+                                    <h3>Welcome, {data.firstName}</h3>
+                                    
                             <p>What would you like to do today?</p>
                                     </div>
                              
                             <div>
-                            <img src="assets/profile.jpg"></img>
+                                {data.profilePic?
+                            <img src="assets/profile.jpg" width="500px"/>: <FaUserCircle />}
                                 </div> 
                                 
                                 </FirstCard>      
@@ -100,7 +107,7 @@
                             <Messages>
                                 <div className="top">
                                 <h5>Brownhill School</h5>
-                                <p>Hi Lamidi, we&apos;d love to...</p> 
+                                <p>Hi {data.firstName}, we&apos;d love to...</p> 
                                 </div>
                                 <StyledButtons>
                                 <Link to="">Read </Link> 
@@ -109,7 +116,7 @@
                             <Messages>
                                 <div className="top">
                                 <h5>School of Rock</h5>
-                                <p>Hi Lamidi, it&apos;s a pleasure to...</p>  
+                                <p>Hi {data.firstName}, it&apos;s a pleasure to...</p>  
                                 </div>
                                 <StyledButtons>
                                     
