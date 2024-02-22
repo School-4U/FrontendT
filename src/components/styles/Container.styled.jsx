@@ -6,6 +6,7 @@ export const Container = styled.div`
   background-color: white;
   margin: 0 auto;
   padding: 10px auto 0;
+
 `;
 
 export const PopupContainer = styled.div`
@@ -28,6 +29,7 @@ export const PopupContainer = styled.div`
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 5px;
   }
+
 `;
 
 export const Content = styled.div`
@@ -45,6 +47,17 @@ export const Content = styled.div`
     font-size: 2.2em;
     font-weight: bold;
     color: black;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1200px){
+    p{
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media screen and (min-width: 320px) and (max-width: 768px){
+   font-size: 1rem;
+  
   }
 `;
 export const Popups = styled.div`

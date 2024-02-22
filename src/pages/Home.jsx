@@ -20,7 +20,7 @@ import {
   CommentImage,
   SearchB,
   Newsletter,
-StyledFAQ
+  StyledFAQ,
 } from "../components/styles/Home.styled";
 import { FaSearch, FaMailBulk, FaArrowRight } from "react-icons/fa";
 import { Faq } from "../components/Faq";
@@ -28,56 +28,53 @@ import { Footer } from "../components/Footer";
 import { Link } from "react-router-dom";
 
 export const Home = () => {
+
   return (
     <Container>
-        <Flex>
-          <Right>
-            <h1>
-              Let’s Help You <span>Find The</span> Right School <span>Easily</span>
-        </h1>
-            <p>
-              School4u is a platform that helps parent match with schools that
-              meet their
-              <br />
-              criteria. Parents can input their preferences on the platform such
-              as budget, <br/>location and many more
-            </p>
-            <SearchB>
-              <FaSearch />
-              <input
-                type="text"
-                placeholder="What will you like to know"
-              ></input>
-              <button type="search">Search</button>
-            </SearchB>
-            <SchoolLink>
-              <Link to="/findASchool">
-                View our Schools <FaArrowRight />
-              </Link>
-            </SchoolLink>
-          </Right>
+      <Flex>
+        <Right>
+          <h1>
+            Let’s Help You <span>Find The</span> Right School{" "}
+            <span>Easily</span>
+          </h1>
+          <p>
+            School4u is a platform that helps parent match with schools that
+            meet their criteria. Parents can input their preferences on the platform such
+            as budget, location and many more
+          </p>
+          <SearchB>
+            <FaSearch />
+            <input type="text" placeholder="What will you like to know"></input>
+            <button type="search">Search</button>
+          </SearchB>
+          <SchoolLink>
+            <Link to="/findASchool">
+              View our Schools <FaArrowRight />
+            </Link>
+          </SchoolLink>
+        </Right>
 
-          <Left>
-            <img
-              src="assets/lady2.jpg"
-              alt="portrait-charming-friendly-polite-happy-african-american-adult-woman-blouse-tilting-head-smiling-broadly-showing-ok"
-            ></img>
-          </Left>
-        </Flex>
-        <Hero>
-          <Right2>
-            <h2>2K+</h2>
-            <p>Current Users</p>
-          </Right2>
-          <Middle>
-            <h2>10</h2>
-            <p>Current Partners</p>
-          </Middle>
-          <Left2>
-            <h2>300+</h2>
-            <p>Schools</p>
-          </Left2>
-        </Hero>
+        <Left>
+          <img
+            src="assets/lady2.jpg"
+            alt="portrait-charming-friendly-polite-happy-african-american-adult-woman-blouse-tilting-head-smiling-broadly-showing-ok"
+          ></img>
+        </Left>
+      </Flex>
+      <Hero>
+        <Right2>
+          <h2>2K+</h2>
+          <p>Current Users</p>
+        </Right2>
+        <Middle>
+          <h2>10</h2>
+          <p>Current Partners</p>
+        </Middle>
+        <Left2>
+          <h2>300+</h2>
+          <p>Schools</p>
+        </Left2>
+      </Hero>
 
       <WhyContainer>Why Choose Us?</WhyContainer>
       <SubHeading>Check Out Some Of What Our Users Are Saying</SubHeading>
@@ -99,32 +96,29 @@ export const Home = () => {
         </Card>
         <Card>
           <img src="assets/Job.svg" />
-          <h4>Job Opportunities</h4>
+          <h4>Skills Acquisition</h4>
           <p>
-            With the use of this platform we are able to provide people with
-            jobs who provide valuable information about the school
+           School4U is able to provide you with the needed resources to improve your skills or learn from the scratch scratch
           </p>
         </Card>
         <Card>
           <img src="assets/Tech.svg" />
-          <h4>Job Opportunities</h4>
+          <h4>Enhanced Technology</h4>
           <p>
-            With the use of this platform we are able to provide people with
-            jobs who provide valuable information about the school
+            This platform makes it easy to find the best school for you, without spending hours on the road
           </p>
         </Card>
         <Card>
           <img src="assets/Community.svg" />
-          <h4>Job Opportunities</h4>
+          <h4>Community</h4>
           <p>
-            With the use of this platform we are able to provide people with
-            jobs who provide valuable information about the school
+            This platform gives room for enlightenment on different schools around
           </p>
         </Card>
       </Grid>
       <WhatContainer>
         <p>What People Say About Us?</p>
-    <h3>Some reviews from some of our users</h3>
+        <h3>Some reviews from some of our users</h3>
 
         <Flex>
           <Comments>
@@ -134,7 +128,7 @@ export const Home = () => {
               means of finding a school for my kid
             </h5>
           </Comments>
-          <hr />
+          
           <Comments2>
             <CommentImage src="assets/rename.png" alt="quote" />
             <h5>
@@ -142,7 +136,7 @@ export const Home = () => {
               come across in recent days
             </h5>
           </Comments2>
-          <hr />
+        
           <Comments>
             <CommentImage src="assets/rename.png" alt="quote" />
             <h5>
@@ -151,33 +145,32 @@ export const Home = () => {
               covered
             </h5>
           </Comments>
-          <hr />
+
         </Flex>
       </WhatContainer>
 
-        <WhyContainer>Frequently Asked Questions</WhyContainer>
-        <SubHeading>
-          Check Some frequently asked questions by Our Users
-        </SubHeading>
-        <StyledFAQ>
+      <WhyContainer>Frequently Asked Questions</WhyContainer>
+      <SubHeading>
+        Check Some frequently asked questions by Our Users
+      </SubHeading>
+      <StyledFAQ>
         <Faq />
-        </StyledFAQ>
-        
-        <WhyContainer>Newsletter</WhyContainer>
-        <Text>
-          Subscribe to our newsletter to get important updates on new schools
-          that might meet your criteria. We offer the <br /> best solutions for
-          difficulties in finding a desired school
-        </Text>
-        <Center>
-          <Newsletter>
-            <FaMailBulk />
-            <input type="email" placeholder="mallymirabel@gmail.com"></input>{" "}
-            <button type="search">Subscribe</button>
-          </Newsletter>
-        </Center>
+      </StyledFAQ>
+
+      <WhyContainer>Newsletter</WhyContainer>
+      <Text>
+        Subscribe to our newsletter to get important updates on new schools that
+        might meet your criteria. We offer the <br /> best solutions for
+        difficulties in finding a desired school
+      </Text>
+      <Center>
+        <Newsletter>
+          <FaMailBulk />
+          <input type="email" placeholder="mallymirabel@gmail.com"></input>{" "}
+          <button type="search">Subscribe</button>
+        </Newsletter>
+      </Center>
       <Footer />
     </Container>
   );
 };
-    

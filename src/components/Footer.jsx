@@ -3,6 +3,7 @@ import {
   FooterRight,
   FooterLeft,
   Copy,
+  FooterLogo,
 } from "./styles/Footer.styled";
 import SVGLogo from "../../public/assets/SVGLogo";
 import {
@@ -19,7 +20,7 @@ export const Footer = () => {
     <>
       <StyledFooter>
         <FooterRight>
-          <SVGLogo />
+          <FooterLogo><SVGLogo /></FooterLogo>
           <h5 style={{ marginTop: "1rem" }}>Follow us</h5>
           <div style={{ fontSize: "2rem", marginTop: "1rem" }}>
             <Link href="https://www.facebook.com/school4u" target="_blank">
@@ -43,12 +44,11 @@ export const Footer = () => {
             </li>
             <li>Schools</li>
             <li>About Us</li>
-            <li>Contact Us</li>
+            <li> <Link to="#contact" className="link">Contact Us</Link></li>
           </ul>
 
           <ul>
             <li>
-              {" "}
               <h4>Community</h4>
             </li>
             <li>Refer a friend</li>
@@ -74,7 +74,7 @@ export const Footer = () => {
           <h5>Privacy Policy</h5>
         </>
         <>
-          {" "}
+          {}
           <h5>Terms and Condition</h5>
         </>
       </Copy>

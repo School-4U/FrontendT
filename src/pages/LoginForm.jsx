@@ -3,10 +3,11 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import styled from "styled-components";
 import { GoogleLogin } from "@react-oauth/google";
-
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const FormGroup = styled.div`
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 `;
 
 const Login = styled.h2`
@@ -22,7 +23,7 @@ const Label = styled.label`
 const Input = styled(Field)`
   display: flex;
   justify-content: center;
-  width: 100%; 
+  width: 100%;
   height: 3rem;
   padding: 1.8rem 1.5rem;
   margin-bottom: 0.5rem;
@@ -34,6 +35,10 @@ const Input = styled(Field)`
   gap: 24px;
   flex-shrink: 0;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 1.5rem;
+  }
 `;
 
 const ErrorMessageStyled = styled(ErrorMessage)`
@@ -131,7 +136,6 @@ const Divider = styled.div`
 
 const Auth = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
@@ -141,24 +145,24 @@ const Auth = styled.div`
 `;
 
 const StyledGoogleLogin = styled(GoogleLogin)`
-width: 100%;
-height: 3rem;
-padding: 0.5rem 1rem;
-margin-bottom: 0.5rem;
-border: 1px solid #6e7fd7;
-outline: none;
-font-size: 1rem;
-align-items: center;
-border-radius: 1.2rem;
-gap: 24px;
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
-color: #1e1e1e;
-background: linear-gradient(
-    0deg,
-    rgba(254, 254, 255, 0.42) 0%,
-    rgba(254, 254, 255, 0.42) 100%
-  ),
-  #fff;
+  width: 100%;
+  height: 3rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #6e7fd7;
+  outline: none;
+  font-size: 1rem;
+  align-items: center;
+  border-radius: 1.2rem;
+  gap: 24px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+  color: #1e1e1e;
+  background: linear-gradient(
+      0deg,
+      rgba(254, 254, 255, 0.42) 0%,
+      rgba(254, 254, 255, 0.42) 100%
+    ),
+    #fff;
 `;
 
 // Validation schema
@@ -168,13 +172,10 @@ const validationSchema = Yup.object().shape({
 });
 
 // Dummy authentication function (replace with actual API call)
-const authenticateUser = async (values) => {
-  // Here, you can make an API call to your backend for authentication
-  console.log("User credentials:", values);
-  // throw new Error('Login failed');
-};
 
 const LoginForm = () => {
+  const navigate = useNavigate();
+
   const handleGoogleLoginSuccess = (response) => {
     console.log("Google Login Success:", response);
     // Handle the successful login, authenticate the user, etc.
@@ -183,6 +184,38 @@ const LoginForm = () => {
   const handleGoogleLoginFailure = (error) => {
     console.error("Google Login Error:", error);
     // Handle the login failure, show an error message, etc.
+  };
+
+
+  const authenticateUser = async (values) => {
+    console.log("User credentials:", values);
+
+    try{
+      const response = await axios.post(
+        "https://backend-production-b20a.up.railway.app/users/login",
+        {
+          email: values.email,
+          password: values.password
+        }
+      );
+
+      const getData = await axios.get(
+        `https://backend-production-b20a.up.railway.app/users/getUser/?email=${values.email}&password=${values.password}`
+        
+      );
+
+      console.log(getData);
+      // toast.success("Login successful");
+
+      navigate("/dashboard",
+          { 
+            state: getData.data.data
+          }
+      );
+    } catch (error) {
+      // setError(error.message);
+      console.error("Signup failed:", error);
+    }
   };
 
   return (

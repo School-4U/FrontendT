@@ -14,12 +14,22 @@ h4{
     font-family: 'Inter Tight', sans-serif;
     font-weight: 700;
     text-align: center;
+    margin-top: 9px;
   
 }
 
 p{
     margin-top: 40px;
     text-align: center;
+
+    @media screen and (min-width: 768px) and (max-width: 1200px){
+ 
+    }
+    
+    @media screen and (min-width: 320px) and (max-width: 768px){
+     margin-top: 20px;
+      }
+    
 }
 
 img{
@@ -27,5 +37,23 @@ img{
     height: 69px;
     margin: auto;
     padding-bottom: 20px
+
+    @media screen and (min-width: 768px) and (max-width: 1200px){
+ 
+    }
+    
+    @media screen and (min-width: 320px) and (max-width: 768px){
+     width: 38px;
+      }
+    
 }
+@media screen and (min-width: 768px) and (max-width: 1200px){
+ 
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+padding: 10px;
+margin: 10px;
+  }
+
 `
