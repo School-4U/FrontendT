@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Top = styled.div`
   width: 100%;
   height: 450px;
-  background-image: url('assets/categories-top-image.png');
+  background-image: url('../../assets/categories-top-image.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -17,7 +17,7 @@ export const Top = styled.div`
   & div {
     text-align: center;
     color: #fff;
-    background-image: url('assets/categories-top-cover.png');
+    background-image: url('../../assets/categories-top-cover.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

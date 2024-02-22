@@ -24,6 +24,8 @@ ul li {
 
 a {
     text-decoration: none;
+    color: inherit;
+    text-decoration: inherit;
 }
 
 span {
@@ -56,5 +58,5 @@ p{
     font-family: 'Inter Tight', sans-serif;
     font-weight: 400;
 }
-`
+`;
 export default GlobalStyles;

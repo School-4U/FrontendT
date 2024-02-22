@@ -161,7 +161,7 @@ export const Parent = () => {
 
             <Formgroup>
               <StyledField
-                type="confirmPassword"
+                type="password"
                 id="confirmPassword"
                 name="confirmPassword"
                 placeholder="Confirm Password"

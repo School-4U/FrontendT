@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import GlobalStyles from "../components/styles/Global";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 
 const Container = styled.div`
