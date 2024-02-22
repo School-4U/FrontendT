@@ -68,7 +68,7 @@
                                 <User>
                                 <Link to="/Parentprofile">
                                 <FaUserCircle />
-                                <h3>{data && data.firstName}</h3>
+                                <h3>{data.firstName}</h3>
                                 </Link>
                                 </User>
 

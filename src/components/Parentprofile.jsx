@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {Field, Form, Formik, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useState, useEffect } from "react";
+import Select from 'react-select';
 
 export const StyledSchoolProfile = styled.div`
   background: white;
@@ -84,7 +85,24 @@ export const Parentprofile = () => {
     location: "",
     socialHandles: "",
     dateOfBirth: "",
+    languages: [],
+    
   });
+
+  const languages = [
+    { value: 'english', label: 'English' },
+    { value: 'spanish', label: 'Spanish' },
+    { value:'yoruba', label: 'Yoruba'},
+    { value:'igbo', label: 'Igbo'},
+    { value:'german', label: 'German'},
+    { value:'hausa', label: 'Hausa'},  
+    { value:'arabic', label: 'Arabic'},
+    { value:'japanese', label: 'Japanese'},
+    { value:'russian',label: 'Russian'},
+    { value:'hindi', label: 'Hindi'},
+    { value:'punjabi', label: 'Punjabi'},
+    {value:'italian', label: 'Italian'},
+  ];
 
   const validationSchema = Yup.object({
     address: Yup.string().required("Address is required"),
@@ -186,6 +204,36 @@ export const Parentprofile = () => {
               name="dateOfBirth"
             />
           </Formgroup>
+
+          <Formgroup>
+            <label htmlFor="language">Languages</label>
+            <StyledField
+              name="language"
+              render={({ field, form }) => (
+                  <Select
+                       {...field}
+                       options={languages}
+                       isMulti
+                       onChange={(options) => form.setFieldValue('languages', options)}
+                       onBlur={() => form.setFieldTouched('languages', true)}
+                          />
+                        )}
+            
+            ></StyledField>
+              
+          </Formgroup>
+          <ErrorMessage name="language" component="span" style={{ color: "red" }} />
+
+          <Formgroup>
+            <label htmlFor="occupation">Occupation</label>
+            <StyledField
+              type="text"
+              id="occupation"
+              name="Occupation"
+            />
+            
+          </Formgroup>
+          <ErrorMessage name="occupation" component="span" style={{ color: "red" }} />
 
           {/* Add similar input fields for other details */}
           <FormButton type="submit">Save</FormButton>
