@@ -4,9 +4,6 @@ import { Container } from "../components/styles/Container.styled";
   import { Link } from "react-router-dom";
   import { StyledDashboard, Sidebar, Main, Top, Right, Left, Home, User, Middle, Card, FirstCard, Active, Messages, StyledButtons, Calender, History} from "../components/styles/Dashboard.styled";
 
-
-  
-  
   export const SchoolDashboard = () => {
     return (
       <div>
@@ -20,10 +17,10 @@ import { Container } from "../components/styles/Container.styled";
                         <FaThLarge />
                         <h3>Dashboard </h3>
                         </Active>
-
+                       
                         <>
                         <FaCommentAlt />
-                        <h3>Message</h3>
+                        <h3>Community</h3>
                         </>
                         <>
                         <FaBookOpen/>

@@ -1,17 +1,24 @@
 
   import {  FaBookOpen, FaClock, FaHome, FaThLarge, FaUserCircle, FaCommentAlt } from "react-icons/fa";
-import { Container } from "../components/styles/Container.styled";
+  import { Container } from "../components/styles/Container.styled";
   import { Link } from "react-router-dom";
   import { StyledDashboard, Sidebar, Main, Top, Right, Left, Home, User, Middle, Card, FirstCard, Active, Messages, StyledButtons, ImageContainer, ImageContainer2} from "../components/styles/Dashboard.styled";
   import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
   import { faStar  } from '@fortawesome/free-solid-svg-icons';
-  
+  import { useNavigate } from "react-router-dom";
+
 
 
   export const Dashboard = () => {
+    const navigate = useNavigate();
+
+    
+  const handleLogout = () => {
+   
+    navigate("/");
+  };
     return (
       <div>
-    
             <Container>
 
                 <StyledDashboard>
@@ -21,10 +28,15 @@ import { Container } from "../components/styles/Container.styled";
                         <FaThLarge />
                         <h3>Dashboard</h3>
                         </Active>
-
+                        <>
+                        <Link to="/Parentprofile">
+                        <FaUserCircle />
+                        <h3>Profile</h3>
+                        </Link>
+                        </>
                         <>
                         <FaCommentAlt />
-                        <h3>Message</h3>
+                        <h3>Community</h3>
                         </>
                         <>
                         <FaBookOpen/>
@@ -50,9 +62,21 @@ import { Container } from "../components/styles/Container.styled";
                                 
                                 </Home>
                                 <User>
+                                <Link to="/Parentprofile">
                                 <FaUserCircle />
                                 <h3>Lamidi</h3>
+                                </Link>
                                 </User>
+
+                                <button onClick={handleLogout} style={{
+                                     padding: '10px 20px',
+                                     backgroundColor: '#6e7fd7',
+                                     color: '#fff',
+                                     marginLeft: '20px',
+                                     border: 'none',
+                                     borderRadius: '5px',
+                                     cursor: 'pointer',
+                                }}>Logout</button>
                             </Left>
                            
                             </Top>
