@@ -4,7 +4,7 @@ import {Field, Form, Formik, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useState, useEffect } from "react";
 import Select from 'react-select';
-import axios from "axios";
+// import axios from "axios";
 
 
 export const StyledSchoolProfile = styled.div`
