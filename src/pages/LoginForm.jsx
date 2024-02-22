@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { GoogleLogin } from "@react-oauth/google";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useAuth } from "../components/AuthContext";
 
 const FormGroup = styled.div`
   margin-bottom: 1rem;
@@ -174,6 +175,7 @@ const validationSchema = Yup.object().shape({
 // Dummy authentication function (replace with actual API call)
 
 const LoginForm = () => {
+  const { isLoggedIn, setIsLoggedIn } = useAuth();
   const navigate = useNavigate();
 
   const handleGoogleLoginSuccess = (response) => {
@@ -201,7 +203,7 @@ const LoginForm = () => {
 
       console.log(response.data, "response be");
       // toast.success("Login successful");
-
+      setIsLoggedIn(true);
       navigate("/dashboard");
     } catch (error) {
       // setError(error.message);

@@ -40,7 +40,7 @@ const StyledDivLogo = styled.div`
   justify-content: center;
   gap: 20px;
 
-  align-text: center;
+  text-align: center;
 
   @media screen and (min-width: 768px) and (max-width: 1200px) {
     margin-left: 10px;
@@ -68,20 +68,20 @@ const StyledDivForgotPassword = styled.div`
 
   h3 {
     font-size: 32px;
-    font-weigh: bold;
+    font-weight: bold;
     line-height: 32px;
     margin-bottom: 12px;
   }
 
   h4 {
     font-size: 24px;
-    font-weigh: normal;
+    font-weight: normal;
   }
 
   h5 {
     font-size: 16px;
     font-weight: normal;
-    text: center;
+    text-align: center;
   }
 
   h6 {
