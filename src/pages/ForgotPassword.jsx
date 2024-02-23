@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Logo } from "../components/styles/Header.styled";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const StyledDiv = styled.div`
   padding: 20px;
@@ -114,11 +117,11 @@ const StyledDivForgotPassword = styled.div`
     margin-bottom: 15px;
 
     padding-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 16px;
+    padding-bottom: 16px;
 
     width: 100%;
-    font-size: 24px;
+    font-size: 16px;
     border-radius: 25px;
     border: 1px solid rgba(110, 127, 215, 1);
   }
@@ -173,6 +176,29 @@ const StyledDivLogin = styled.div`
 `;
 
 const ForgotPassword = () => {
+  const navigate = useNavigate();
+
+  const [email, setEmail] = useState("");
+
+  const notifyError = () => toast("Oops, an error occured!");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post(
+        "https://backend-production-b20a.up.railway.app/users/changePassword",
+        { email }
+      );
+
+      console.log(response, "axios response");
+
+      navigate("/login");
+    } catch (error) {
+      notifyError();
+    }
+  };
+
   return (
     <StyledDiv>
       <StyledDivLogo>
@@ -193,10 +219,16 @@ const ForgotPassword = () => {
         </StyledDivText>
 
         <StyledDivInput>
-          <input type="text" placeholder="Email" />
+          <input
+            type="text"
+            placeholder="Email"
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+          />
         </StyledDivInput>
 
-        <button>Get Link</button>
+        <button onClick={handleSubmit}>Get Link</button>
 
         <StyledDivLogin>
           <h6>
