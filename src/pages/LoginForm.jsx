@@ -192,19 +192,30 @@ const LoginForm = () => {
   const authenticateUser = async (values) => {
     console.log("User credentials:", values);
 
-    try {
+    try{
       const response = await axios.post(
         "https://backend-production-b20a.up.railway.app/users/login",
         {
           email: values.email,
-          password: values.password,
+          password: values.password
         }
       );
 
-      console.log(response.data, "response be");
+      const getData = await axios.get(
+        `https://backend-production-b20a.up.railway.app/users/getUser/?email=${values.email}&password=${values.password}`
+        
+      );
+
+      console.log(getData);
       // toast.success("Login successful");
+
       setIsLoggedIn(true);
-      navigate("/dashboard");
+      navigate("/dashboard",
+          { 
+            state: getData.data.data
+          }
+      );
+
     } catch (error) {
       // setError(error.message);
       console.error("Signup failed:", error);
