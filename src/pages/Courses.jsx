@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const CourseListContainer = styled.div`
   max-width: 600px;
@@ -54,7 +55,7 @@ const Courses = () => {
       <h1>Course List</h1>
       {courses?.data.map((course) => (
         <CourseItem key={course.id}>
-          <CourseTitle>{course.description}</CourseTitle>
+          <CourseTitle><Link to={`/courses/${course.id}`}>{course.description}</Link></CourseTitle>
           <Content>Course code: {course.course_content}</Content>
         </CourseItem>
       ))}
