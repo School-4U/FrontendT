@@ -1,4 +1,3 @@
-
   import {  FaBookOpen, FaClock, FaHome, FaThLarge, FaUserCircle, FaCommentAlt } from "react-icons/fa";
   import { Container } from "../components/styles/Container.styled";
   import { Link } from "react-router-dom";
@@ -87,7 +86,7 @@
                            
               </Top>
                     
-                <Middle>
+              <Middle>
                   <Card>
                     <FirstCard>
                       <div>
@@ -140,31 +139,27 @@
                           <FontAwesomeIcon icon={faStar} style={{ color: 'orange' }} />
                           <FontAwesomeIcon icon={faStar } style={{ color: 'orange' }} />
                           <FontAwesomeIcon icon={faStar } style={{ color: 'lightgray' }} />
-                        
-                        </div>
-                      </div>
-										</ImageContainer>
+												</div>
+										  </div>
+									  </ImageContainer>
                     <ImageContainer2>
                       <div className="top">
-                        <p>School Of Rock</p>
-                        <div className="icons">
-                         <FontAwesomeIcon icon={faStar} style={{ color: 'orange' }} />
-                         <FontAwesomeIcon icon={faStar} style={{ color: 'orange' }} />
-                         <FontAwesomeIcon icon={faStar} style={{ color: 'orange' }} />
-                         <FontAwesomeIcon icon={faStar } style={{ color: 'orange' }} />
-                         <FontAwesomeIcon icon={faStar } style={{ color: 'orange' }} />
-                        
-                        </div>
+                         <p>School Of Rock</p>
+												 <div className="icons">   
+                          <FontAwesomeIcon icon={faStar} style={{ color: 'orange' }} />
+                          <FontAwesomeIcon icon={faStar} style={{ color: 'orange' }} />
+                          <FontAwesomeIcon icon={faStar} style={{ color: 'orange' }} />
+                          <FontAwesomeIcon icon={faStar } style={{ color: 'orange' }} />
+                          <FontAwesomeIcon icon={faStar } style={{ color: 'orange' }} />
+												</div>
+                       
                       </div>
-                            
                     </ImageContainer2>
                   </Card>
-                </Middle>
+              </Middle>
             </Main>
           </StyledDashboard>
         </Container>
       </div>
-    )
-  }
-  
-
+  );
+};
