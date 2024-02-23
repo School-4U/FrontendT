@@ -5,7 +5,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-
 const Container = styled.div`
   width: 100%;
   max-width: 600px;
@@ -127,12 +126,16 @@ const EmailVerification = () => {
 
     try {
       const otp = verificationCode.join("");
+      console.log(typeof otp, "otp here");
+
       const response = await axios.post(
         "https://backend-production-b20a.up.railway.app/users/parentSignup",
         {
           otp,
         }
       );
+
+      console.log(response, "respones here");
 
       if (response.status === 200) {
         // Verification successful, you can handle the success logic here
@@ -145,7 +148,6 @@ const EmailVerification = () => {
       console.log(`"Error occurred during verification:", ${error.message}`);
     }
   };
-
 
   return (
     <Container>
