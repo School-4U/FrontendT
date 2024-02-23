@@ -68,7 +68,7 @@ export default function Header() {
                     </Button>
                   </>
                   {/* onClick={() => {  handleClick2(); }} */}
-                  <NavLink to="/" onClick={() => { close(); handleClick(); }}>
+                  <NavLink to="/" onClick={() => { close(); handleLogout(); }}>
                     <SignB>Logout</SignB>
                   </NavLink>
                 </StyledButtons>
