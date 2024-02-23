@@ -1,6 +1,5 @@
-
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 export const CourseDetails = () => {
   const { id } = useParams();
@@ -8,21 +7,20 @@ export const CourseDetails = () => {
 
   useEffect(() => {
     fetch(`https://backend-production-b20a.up.railway.app/courses/${id}`)
-      .then(response => response.json())
-      .then(data => setCourse(data))
-      .catch(error => console.error('Error fetching course:', error));
+      .then((response) => response.json())
+      .then((data) => setCourse(data))
+      .catch((error) => console.error("Error fetching course:", error));
   }, [id]);
- 
+
   if (!course) {
     return <div>Loading...</div>;
   }
 
   return (
     <div>
-      <h1>{course.title}</h1>
-      <p>{course.description}</p>
-      {/* Add more course details as needed */}
+      <h2>Course details here</h2>
+      <h4>{course?.data.course_content}</h4>
+      <h4>{course?.data.description}</h4>
     </div>
   );
 };
-
