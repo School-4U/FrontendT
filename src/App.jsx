@@ -21,7 +21,7 @@ import { Dashboard } from "./pages/Dashboard";
 import { SchoolDashboard } from "./pages/SchoolDashboard";
 import { useLocation } from "react-router-dom";
 import ForgotPassword from "./pages/ForgotPassword";
-import { AuthProvider } from './components/AuthContext';
+// import { AuthProvider } from './components/AuthContext';
 import { Parentprofile } from "./components/Parentprofile";
 
 
@@ -55,7 +55,7 @@ function App() {
           <Route path="/categories" element={<Categories />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/Schooldashboard" element={<SchoolDashboard />} />
+          <Route path="/SchoolDashboard" element={<SchoolDashboard />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>
