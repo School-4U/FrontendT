@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { GoogleLogin } from "@react-oauth/google";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useAuth } from "../components/AuthContext";
+import { useAuth } from "../components/AuthContext"
 
 const FormGroup = styled.div`
   margin-bottom: 1rem;
@@ -210,12 +210,22 @@ const LoginForm = () => {
       // toast.success("Login successful");
 
       setIsLoggedIn(true);
-      navigate("/dashboard",
-          { 
-            state: getData.data.data
-          }
-      );
+      if(getData.data.data.type === "parent"){
+        navigate("/dashboard",
+        { 
+          state: getData.data.data
+        }
+    );
+      }
 
+    if(getData.data.data.type === "school"){
+      navigate("/Schooldashboard",
+      { 
+        state: getData.data.data
+      }
+  );
+    }
+     
     } catch (error) {
       // setError(error.message);
       console.error("Signup failed:", error);
