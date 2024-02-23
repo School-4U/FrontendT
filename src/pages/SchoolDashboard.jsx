@@ -3,8 +3,23 @@ import {  FaBookOpen, FaClock, FaHome, FaThLarge, FaUserCircle, FaCommentAlt, Fa
 import { Container } from "../components/styles/Container.styled";
   import { Link } from "react-router-dom";
   import { StyledDashboard, Sidebar, Main, Top, Right, Left, Home, User, Middle, Card, FirstCard, Active, Messages, StyledButtons, Calender, History} from "../components/styles/Dashboard.styled";
+  import { useNavigate } from "react-router-dom";
+  import { useLocation } from "react-router-dom";
+
 
   export const SchoolDashboard = () => {
+    const location = useLocation();
+	const data = location.state;
+    
+
+    const navigate = useNavigate();
+
+	
+ const handleLogout = () => {
+ 
+	navigate("/");
+
+ }
     return (
       <div>
 
@@ -51,8 +66,18 @@ import { Container } from "../components/styles/Container.styled";
                                 </Home>
                                 <User>
                                 <FaUserCircle />
-                                <h3>Brownhill School</h3>
+                                <h3>{data.name}</h3>
                                 </User>
+
+                                <button onClick={handleLogout} style={{
+                                     padding: '10px 20px',
+                                     backgroundColor: '#6e7fd7',
+                                     color: '#fff',
+                                     marginLeft: '20px',
+                                     border: 'none',
+                                     borderRadius: '5px',
+                                     cursor: 'pointer',
+                                }}>Logout</button>
                             </Left>
                            
                             </Top>
@@ -61,7 +86,7 @@ import { Container } from "../components/styles/Container.styled";
                             <Card>
                                 <FirstCard>
                                     <div>
-                                    <h3>Welcome, <br/>Brownhill School</h3>
+                                    <h3>Welcome, <br/>{data.name}</h3>
                             <p>What would you like to do today?</p>
                                     </div>
                              
@@ -76,7 +101,7 @@ import { Container } from "../components/styles/Container.styled";
                             <Messages>
                                 <div className="top">
                                 <h5>Lamidi</h5>
-                                <p>Hi Brownhill School, I&apos;d love to know...</p> 
+                                <p>Hi {data.name}, I&apos;d love to know...</p> 
                                 </div>
                                 <StyledButtons>
                                 <Link to="">Read </Link> 
@@ -85,7 +110,7 @@ import { Container } from "../components/styles/Container.styled";
                             <Messages>
                                 <div className="top">
                                 <h5>Iyke</h5>
-                                <p>Hi Brownhill School, please does your...</p>  
+                                <p>Hi {data.name}, please does your...</p>  
                                 </div>
                                 <StyledButtons>
                                     

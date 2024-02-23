@@ -198,7 +198,7 @@ export const WhatContainer = styled.div`
     }
 
     @media screen and (min-width: 320px) and (max-width: 768px) {
-      font-size: 16px;
+      font-size: 14px;
       margin-top: 10px;
     }
   }
@@ -245,7 +245,7 @@ export const Comments2 = styled.div`
   @media screen and (min-width: 320px) and (max-width: 768px) {
     font-size: 16px;
     padding: 20px;
-    margin-top: 20px;
+    margin: 10px 0;
   }
 `;
 export const CommentImage = styled.img`

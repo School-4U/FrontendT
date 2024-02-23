@@ -42,8 +42,10 @@ export const Dashboard = () => {
 											<h3>Community</h3>
 											</>
 											<>
+											<Link to="/Courses">
 											<FaBookOpen/>
 											<h3>Courses</h3>
+											</Link>
 											</>
 											<>
 											<FaClock/>
@@ -153,8 +155,6 @@ export const Dashboard = () => {
 										/>
 									</div>
 								</div>
-
-								<div></div>
 							</ImageContainer>
 							<ImageContainer2>
 								<div className="top">

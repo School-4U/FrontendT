@@ -113,6 +113,11 @@ export const Button = styled.button`
     width: 90px;
     margin: auto;
 }
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+    width: 90px;
+    margin: auto;
+}
 `
 export const SignB = styled.button`
     border: none;
