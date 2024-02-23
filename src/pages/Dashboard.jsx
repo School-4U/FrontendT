@@ -34,7 +34,11 @@ import { useLocation } from "react-router-dom";
 export const Dashboard = () => {
   //let data2 = route.params.state
   const location = useLocation();
-  const data = location.state;
+  // const data = location.state;
+  const data = {
+    firstName: "Ayo",
+    profilePic: "pics",
+  };
 
   const navigate = useNavigate();
 

@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const CourseListContainer = styled.div`
   max-width: 600px;
@@ -47,26 +48,19 @@ const Courses = () => {
     fetchData();
   }, []);
 
-  console.log(courses?.data, "coourses here");
-
   return (
     <CourseListContainer>
       <h1>Course List</h1>
       {courses?.data.map((course) => (
-        <CourseItem key={course.id}>
-          <CourseTitle>{course.description}</CourseTitle>
-          <Content>Course code: {course.course_content}</Content>
-        </CourseItem>
+        <Link to={`/courses/${course.id}`}>
+          <CourseItem key={course.id}>
+            <CourseTitle>{course.description}</CourseTitle>
+            <Content>Course code: {course.course_content}</Content>
+          </CourseItem>
+        </Link>
       ))}
     </CourseListContainer>
   );
 };
 
 export default Courses;
-
-// ## List of changes
-
-// ### What has changed
-// - added a route to courses page from the dashboard page
-// - added courses page UI
-// - integrated API for courses page
