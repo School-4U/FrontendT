@@ -25,6 +25,8 @@ import ForgotPassword from "./pages/ForgotPassword";
 import { Parentprofile } from "./components/Parentprofile";
 import Courses from "./pages/Courses";
 import { SchoolVerification } from "./pages/SchoolVerification";
+import {CourseDetails} from "./pages/CourseDetails";
+
 
 function App() {
   const location = useLocation();
@@ -62,6 +64,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/SchoolDashboard" element={<SchoolDashboard />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/courses/:id" element={<CourseDetails />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>
