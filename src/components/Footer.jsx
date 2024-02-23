@@ -15,6 +15,7 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
+
 export const Footer = () => {
   return (
     <>
@@ -74,7 +75,7 @@ export const Footer = () => {
           <h5>Privacy Policy</h5>
         </>
         <>
-          {}
+          { }
           <h5>Terms and Condition</h5>
         </>
       </Copy>
