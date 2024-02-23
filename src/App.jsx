@@ -23,8 +23,7 @@ import { useLocation } from "react-router-dom";
 import ForgotPassword from "./pages/ForgotPassword";
 // import { AuthProvider } from './components/AuthContext';
 import { Parentprofile } from "./components/Parentprofile";
-
-
+import Courses from "./pages/Courses";
 
 function App() {
   const location = useLocation();
@@ -34,7 +33,6 @@ function App() {
 
   return (
     <>
-
       <GlobalStyles />
       {isDashboardPage || isSchoolDashboardPage || isParentProfile ? null : (
         <Header />
@@ -57,10 +55,10 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/SchoolDashboard" element={<SchoolDashboard />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/courses" element={<Courses />} />
           <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>
       </Container>
-
     </>
   );
 }
