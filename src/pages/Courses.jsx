@@ -63,3 +63,10 @@ const Courses = () => {
 };
 
 export default Courses;
+
+// ## List of changes
+
+// ### What has changed
+// - added a route to courses page from the dashboard page
+// - added courses page UI
+// - integrated API for courses page

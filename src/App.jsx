@@ -24,17 +24,23 @@ import ForgotPassword from "./pages/ForgotPassword";
 // import { AuthProvider } from './components/AuthContext';
 import { Parentprofile } from "./components/Parentprofile";
 import Courses from "./pages/Courses";
+import { SchoolVerification } from "./pages/SchoolVerification";
 
 function App() {
   const location = useLocation();
   const isDashboardPage = location.pathname === "/dashboard";
-  const isSchoolDashboardPage = location.pathname === "/SchoolDashboard";
+  const isSchoolDashboardPage =
+    location.pathname.toLowerCase().trim() === "/schooldashboard";
   const isParentProfile = location.pathname === "/Parentprofile";
+  const isCourses = location.pathname === "/Courses";
 
   return (
     <>
       <GlobalStyles />
-      {isDashboardPage || isSchoolDashboardPage || isParentProfile ? null : (
+      {isDashboardPage ||
+      isSchoolDashboardPage ||
+      isParentProfile ||
+      isCourses ? null : (
         <Header />
       )}
       {/* {SchoolDashboardPage ? null : <Header />} */}
@@ -47,6 +53,7 @@ function App() {
           <Route path="/popup" element={<Popup />} />
           <Route path="/Parent" element={<Parent />} />
           <Route path="/verification" element={<Verification />} />
+          <Route path="/schoolverification" element={<SchoolVerification />} />
           <Route path="/FindASchool" element={<FindASchool />} />
           <Route path="/Parentprofile" element={<Parentprofile />} />
           <Route path="/User" element={<User />} />

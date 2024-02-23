@@ -34,11 +34,7 @@ import { useLocation } from "react-router-dom";
 export const Dashboard = () => {
   //let data2 = route.params.state
   const location = useLocation();
-  // const data = location.state;
-  const data = {
-    firstName: "Ayo",
-    profilePic: "pic",
-  };
+  const data = location.state;
 
   const navigate = useNavigate();
 
@@ -65,10 +61,12 @@ export const Dashboard = () => {
               <FaCommentAlt />
               <h3>Community</h3>
             </>
-            <a href="/courses">
-              <FaBookOpen />
-              <h3>Courses</h3>
-            </a>
+            <>
+              <Link to="/courses">
+                <FaBookOpen />
+                <h3>Courses</h3>
+              </Link>
+            </>
             <>
               <FaClock />
               <h3>History</h3>
@@ -133,7 +131,7 @@ export const Dashboard = () => {
                 <Messages>
                   <div className="top">
                     <h5>Brownhill School</h5>
-                    <p>Hi {data.firstName}, we&apos;d love to...</p>
+                    <p>Hi Lamidi, we&apos;d love to...</p>
                   </div>
                   <StyledButtons>
                     <Link to="">Read </Link>
@@ -142,7 +140,7 @@ export const Dashboard = () => {
                 <Messages>
                   <div className="top">
                     <h5>School of Rock</h5>
-                    <p>Hi {data.firstName}, it&apos;s a pleasure to...</p>
+                    <p>Hi Lamidi, it&apos;s a pleasure to...</p>
                   </div>
                   <StyledButtons>
                     <Link to="">Read</Link>
@@ -180,8 +178,6 @@ export const Dashboard = () => {
                       />
                     </div>
                   </div>
-
-                  <div></div>
                 </ImageContainer>
                 <ImageContainer2>
                   <div className="top">
