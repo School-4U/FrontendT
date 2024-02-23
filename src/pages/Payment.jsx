@@ -64,19 +64,19 @@ const StyledDivPayment = styled.div`
 
   h3 {
     font-size: 32px;
-    font-weigh: bold;
+    font-weight: bold;
     line-height: 32px;
   }
 
   h4 {
     font-size: 24px;
-    font-weigh: normal;
+    font-weight: normal;
   }
 
   h5 {
     font-size: 16px;
     font-weight: normal;
-    text: center;
+    text-align: center;
   }
 
   h6 {

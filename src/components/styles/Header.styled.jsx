@@ -35,11 +35,12 @@ gap: 50px;
 li{
     margin: 1.5rem auto;
     text-align: center;
+    white-space: nowrap;
 }
 
 @media screen and (min-width: 768px) and  (max-width: 1200px){
     display: ${(props) => (props.active ? "block" : "none")};
-    background: #ebc888;
+    background: orange;
     margin-top: 30px;
     z-index: 100;
    
@@ -61,7 +62,7 @@ li{
 export const Logo = styled.img`
 width: auto;
 height: 2.5rem;
-margin-left: 20px;
+margin-left: 1.25rem;
 align-self: start;
 
 @media screen and (min-width: 768px) and (max-width: 1200px){

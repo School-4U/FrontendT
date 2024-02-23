@@ -1,4 +1,3 @@
-
   import {  FaBookOpen, FaClock, FaHome, FaThLarge, FaUserCircle, FaCommentAlt } from "react-icons/fa";
   import { Container } from "../components/styles/Container.styled";
   import { Link } from "react-router-dom";
@@ -146,33 +145,101 @@
                             
                             <div>
 
-                            </div>
 
-                            </ImageContainer>
-                            <ImageContainer2>
-                                <div className="top">
-                                <p>School Of Rock</p>
-                            <div className="icons">
-                                <FontAwesomeIcon icon={faStar} style={{ color: 'orange' }} />
-                               <FontAwesomeIcon icon={faStar} style={{ color: 'orange' }} />
-                               <FontAwesomeIcon icon={faStar} style={{ color: 'orange' }} />
-                               <FontAwesomeIcon icon={faStar } style={{ color: 'orange' }} />
-                               <FontAwesomeIcon icon={faStar } style={{ color: 'orange' }} />
-                        
-                            </div>
-                                </div>
-                            
-                            <div>
-                                
-                            </div>
-                            </ImageContainer2>
-                        </Card>
-                    </Middle>
-                    </Main>
-                </StyledDashboard>
-            </Container>
-      </div>
-    )
-  }
-  
+                  <div>
+                    <img src="assets/profile.jpg"></img>
+                  </div>
+                </FirstCard>
+              </Card>
+              <Card>
+                <h3>Messages</h3>
+                <Messages>
+                  <div className="top">
+                    <h5>Brownhill School</h5>
+                    <p>Hi Lamidi, we&apos;d love to...</p>
+                  </div>
+                  <StyledButtons>
+                    <Link to="">Read </Link>
+                  </StyledButtons>
+                </Messages>
+                <Messages>
+                  <div className="top">
+                    <h5>School of Rock</h5>
+                    <p>Hi Lamidi, it&apos;s a pleasure to...</p>
+                  </div>
+                  <StyledButtons>
+                    <Link to="">Read</Link>
+                  </StyledButtons>
+                </Messages>
+              </Card>
+              <div className="card">
+                <img src="assets/map.svg"></img>
+              </div>
+              <Card>
+                <h3>History</h3>
+                <ImageContainer>
+                  <div className="top">
+                    <p>Brownhill School</p>
+                    <div className="icons">
+                      <FontAwesomeIcon
+                        icon={faStar}
+                        style={{ color: "orange" }}
+                      />
+                      <FontAwesomeIcon
+                        icon={faStar}
+                        style={{ color: "orange" }}
+                      />
+                      <FontAwesomeIcon
+                        icon={faStar}
+                        style={{ color: "orange" }}
+                      />
+                      <FontAwesomeIcon
+                        icon={faStar}
+                        style={{ color: "orange" }}
+                      />
+                      <FontAwesomeIcon
+                        icon={faStar}
+                        style={{ color: "lightgray" }}
+                      />
+                    </div>
+                  </div>
 
+                  <div></div>
+                </ImageContainer>
+                <ImageContainer2>
+                  <div className="top">
+                    <p>School Of Rock</p>
+                    <div className="icons">
+                      <FontAwesomeIcon
+                        icon={faStar}
+                        style={{ color: "orange" }}
+                      />
+                      <FontAwesomeIcon
+                        icon={faStar}
+                        style={{ color: "orange" }}
+                      />
+                      <FontAwesomeIcon
+                        icon={faStar}
+                        style={{ color: "orange" }}
+                      />
+                      <FontAwesomeIcon
+                        icon={faStar}
+                        style={{ color: "orange" }}
+                      />
+                      <FontAwesomeIcon
+                        icon={faStar}
+                        style={{ color: "orange" }}
+                      />
+                    </div>
+                  </div>
+
+                  <div></div>
+                </ImageContainer2>
+              </Card>
+            </Middle>
+          </Main>
+        </StyledDashboard>
+      </Container>
+    </div>
+  );
+};

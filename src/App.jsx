@@ -21,7 +21,9 @@ import { Dashboard } from "./pages/Dashboard";
 import { SchoolDashboard } from "./pages/SchoolDashboard";
 import { useLocation } from "react-router-dom";
 import ForgotPassword from "./pages/ForgotPassword";
+import { AuthProvider } from './components/AuthContext';
 import { Parentprofile} from "./components/Parentprofile";
+
 
 function App() {
   const location = useLocation();
@@ -31,6 +33,7 @@ function App() {
 
   return (
     <>
+
       <GlobalStyles />
       {isDashboardPage || isSchoolDashboardPage || isParentProfile ? null : <Header />}
       {/* {SchoolDashboardPage ? null : <Header />} */}
@@ -54,6 +57,7 @@ function App() {
           <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>
       </Container>
+
     </>
   );
 }
